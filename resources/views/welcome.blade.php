@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layouts.main')
 
 @section('container')
