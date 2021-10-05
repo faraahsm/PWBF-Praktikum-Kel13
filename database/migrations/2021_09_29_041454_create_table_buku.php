@@ -17,8 +17,8 @@ class CreateTableBuku extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('idbuku');
-            $table->string('buku',50);
-            $table->longText('keterangan');
+            $table->string('bukuu',50);
+            $table->longText('keterangan ');
         });
     }
 
