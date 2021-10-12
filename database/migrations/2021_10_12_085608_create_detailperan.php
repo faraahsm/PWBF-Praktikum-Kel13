@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTabelPengurus extends Migration
+class CreateDetailperan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateTabelPengurus extends Migration
      */
     public function up()
     {
-        Schema::create('tabel_pengurus', function (Blueprint $table) {
+        Schema::create('detailperan', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('FK_Id_peran')->constrained('peran');
+            $table->foreignId('FK_Id_pengurus')->constrained('pengurus');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateTabelPengurus extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tabel_pengurus');
+        Schema::dropIfExists('detailperan');
     }
 }
