@@ -14,7 +14,7 @@ class CreateDetailperan extends Migration
     public function up()
     {
         Schema::create('detailperan', function (Blueprint $table) {
-            $table->id();
+            $table->id('iddetailperan');
             $table->foreignId('FK_Id_peran')->constrained('peran');
             $table->foreignId('FK_Id_pengurus')->constrained('pengurus');
             $table->timestamps();

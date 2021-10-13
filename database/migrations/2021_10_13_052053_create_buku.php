@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableBab extends Migration
+class CreateBuku extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateTableBab extends Migration
      */
     public function up()
     {
-        Schema::create('table_bab', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->integer('idbab');
-            $table->integer('idbuku');
-            $table->string('bab',50);
-            $table->string('judul',100);
+        Schema::create('buku', function (Blueprint $table) {
+            $table->id('idbuku');
+            $table->string('buku',50);
             $table->longText('keterangan');
+            $table->timestamps();
         });
     }
 
@@ -31,6 +28,6 @@ class CreateTableBab extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_bab');
+        Schema::dropIfExists('buku');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableBuku extends Migration
+class CreateBab extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateTableBuku extends Migration
      */
     public function up()
     {
-        Schema::create('table_buku', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->integer('idbuku');
-            $table->string('bukuu',50);
+        Schema::create('bab', function (Blueprint $table) {
+            $table->id('idbab');
+            $table->foreignId('FK_Id_buku')->constrained('buku');
+            $table->string('bab',50);
+            $table->string('judul',100);
             $table->longText('keterangan');
+            $table->timestamps();
         });
     }
 
@@ -29,6 +30,6 @@ class CreateTableBuku extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_buku');
+        Schema::dropIfExists('bab');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableKemajuan extends Migration
+class CreateKemajuan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateTableKemajuan extends Migration
      */
     public function up()
     {
-        Schema::create('table_kemajuan', function (Blueprint $table) {
-            $table->id();
-            $table->integer('idkemajuan');
-            $table->integer('idsantri');
-            $table->integer('idpengurus');
+        Schema::create('kemajuan', function (Blueprint $table) {
+            $table->id('idkemajuan');
+            $table->foreignId('FK_Id_santri')->constrained('santri');
+            $table->foreignId('FK_Id_pengurus')->constrained('pengurus');
             $table->timestamp('tanggal');
             $table->char('status',1);
             $table->timestamps();
@@ -31,6 +30,6 @@ class CreateTableKemajuan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_kemajuan');
+        Schema::dropIfExists('kemajuan');
     }
 }
