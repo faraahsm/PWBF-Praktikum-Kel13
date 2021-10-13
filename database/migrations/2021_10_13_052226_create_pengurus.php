@@ -14,7 +14,7 @@ class CreatePengurus extends Migration
     public function up()
     {
         Schema::create('pengurus', function (Blueprint $table) {
-            $table->id('idpengurus');
+            $table->id('id_pengurus');
             $table->string('nama_pengurus',20);  
             $table->string('email',30);
             $table->string('hp',15); 

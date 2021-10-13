@@ -14,7 +14,7 @@ class CreatePeran extends Migration
     public function up()
     {
         Schema::create('peran', function (Blueprint $table) {
-            $table->id('idperan');
+            $table->id('id_peran');
             $table->string('peran',20);
             $table->char('aktif',1);
             $table->timestamps();
