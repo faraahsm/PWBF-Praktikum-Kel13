@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Techro is a modern and fully responsive Template by WebThemez.">
     <meta name="author" content="webThemez.com">
-    <title>Techro - Flat Free Responsive bootstrap template</title>
+    <title>TPQ Banyu Urip | Beranda</title>
     <link rel="favicon" href="assets/images/favicon.png">
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -28,14 +28,22 @@
                 <!-- Button for smallest screens -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.png" alt="Techro HTML5 template"></a>
+                    <img src="assets/images/logo.png" alt="TPQ Banyu Urip"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ ($title === "Beranda") ? 'active' : '' }}" href="{{ url('/')}}">Beranda</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {{ ($title === "Tentang") ? 'active' : '' }}" href="{{ url('/about')}}">Tentang</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {{ ($title === "Daftar") ? 'active' : '' }}" href="{{ url('/register')}}">Daftar</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {{ ($title === "Masuk") ? 'active' : '' }}" href="{{ url('/login')}}">Masuk</a>
+                      </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
