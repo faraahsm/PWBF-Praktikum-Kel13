@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<<<<<<< HEAD
 <title>TPQ Banyu Urip</title>
+=======
+<title>TPQ BANYU URIP</title>
+>>>>>>> be29451a503740afa427c2bbed63a7571ec8c44d
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
@@ -36,6 +40,7 @@
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
+<<<<<<< HEAD
                         <li class="nav-item">
                             <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="{{ url('/')}}">Home</a>
                           </li>
@@ -48,6 +53,14 @@
                           <li class="nav-item">
                             <a class="nav-link {{ ($title === "Login") ? 'active' : '' }}" href="{{ url('/login')}}">Login</a>
                           </li>
+=======
+                        <li class="active"><a href="index.html">Home</a></li> 
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="services.html">Services</a></li>
+                        <li><a href="courses.html"></a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+>>>>>>> be29451a503740afa427c2bbed63a7571ec8c44d
                     </ul>
                 </div>
             </div>

@@ -14,7 +14,9 @@ class peran extends Controller
      */
     public function index()
     {
-        //
+        $peran = DB::table('peran')->get();
+
+        return view('dashboard.peran-table', ['peran' => $peran]);
     }
 
     /**

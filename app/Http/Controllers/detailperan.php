@@ -14,7 +14,9 @@ class detailperan extends Controller
      */
     public function index()
     {
-        //
+        $detail_peran = DB::table('detail_peran')->get();
+
+        return view('dashboard.detail-peran-table', ['detail_peran' => $detail_peran]);
     }
 
     /**
