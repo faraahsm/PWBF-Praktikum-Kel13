@@ -15,19 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome', [
-        "title" => "Home"
+        "title" => "Beranda"
     ]);
 });
 
-Route::get('/about', function () {
+Route::get('/tentang', function () {
     return view('about', [
-        "title" => "About"
+        "title" => "Tentang"
     ]);
 });
 
-Route::get('/register', function () {
+Route::get('/daftar', function () {
     return view('register', [
-        "title" => "Register"
+        "title" => "Daftar"
     ]);
 });
 

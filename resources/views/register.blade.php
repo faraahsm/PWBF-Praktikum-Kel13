@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('views.welcome')
 
 @section('container')
     <h1>Join with TPQ Banyu Urip</h1>

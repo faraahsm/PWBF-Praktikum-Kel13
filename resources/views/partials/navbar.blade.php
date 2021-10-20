@@ -1,11 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #bc8f8f;">
+<nav class="navbar navbar-default navbar-static-top">
     <div class="container">
-      <a class="navbar-brand" href="{{ url('/')}}">TPQ Banyu Urip</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ url('/')}}"><img src="img/logo.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-collapse collapse ">
+        <ul class="nav navbar-nav">
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="{{ url('/')}}">Home</a>
           </li>
@@ -21,4 +25,4 @@
         </ul>
       </div>
     </div>
-  </nav>
+</nav>

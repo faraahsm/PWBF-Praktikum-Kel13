@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>School Educational Free HTML5 Bootstrap Template</title>
+<title>TPQ Banyu Urip</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <meta name="author" content="http://webthemez.com" />
@@ -32,16 +32,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+                    <a class="navbar-brand" href="{{ url('/')}}"><img src="img/logo.png" alt="logo"/></a>
                 </div>
                 <div class="navbar-collapse collapse ">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li> 
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="services.html">Services</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="{{ url('/')}}">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/about')}}">About</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link {{ ($title === "Register") ? 'active' : '' }}" href="{{ url('/register')}}">Register</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link {{ ($title === "Login") ? 'active' : '' }}" href="{{ url('/login')}}">Login</a>
+                          </li>
                     </ul>
                 </div>
             </div>
@@ -56,7 +62,7 @@
               <li>
                 <img src="img/slides/1.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Smart Learning..</h3> 
+                    <h3>Menjadikan santri berakhlak mulia & berbudi pekerti luhur</h3> 
 					<p>Doloribus omnis minus temporibus perferendis ipsa<br/> architecto non, magni quam</p> 
 					<a href="#" class="btn btn-theme">Read More</a>
                 </div>
@@ -64,7 +70,7 @@
               <li>
                 <img src="img/slides/2.jpg" alt="" />
                 <div class="flex-caption container">
-                    <h3>Best Educational Campus..</h3> 
+                    <h3>Pilihan yang tepat untuk pendidikan Al-Quran</h3> 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing<br/> elitincidunt eius magni provident.</p> 
 					<a href="#" class="btn btn-theme">Read More</a>
                 </div>
@@ -78,7 +84,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<div class="aligncenter"><h1 class="aligncenter">Our Courses</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus.</div>
+				<div class="aligncenter"><h1 class="aligncenter">Pembelajaran Kami</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus.</div>
 				
 			</div>
 		</div>
@@ -110,7 +116,7 @@
                                 <i class="fa fa-users"></i>
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Teacher Info</h4>
+                                <h4 class="media-heading">Info Pengajar</h4>
                                 <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
                             </div>
                         </div>
@@ -174,7 +180,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="aligncenter"><h2 class="aligncenter">Our Students</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus..</div>
+				<div class="aligncenter"><h2 class="aligncenter">Murid Kami</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus..</div>
 				<br/>
 			</div>
 		</div> 
@@ -202,7 +208,7 @@
 	<div class="container">
 	<div class="row">
 			<div class="col-md-12">
-				<div class="aligncenter"><h2 class="aligncenter">Our Events</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus.</div>
+				<div class="aligncenter"><h2 class="aligncenter">Kegiatan Kami</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti consequuntur possimus.</div>
 				<br>
 			</div>
 		</div>
@@ -252,14 +258,14 @@
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="widget">
-					<h5 class="widgetheading">Our Contact</h5>
+					<h5 class="widgetheading">Kontak Kami</h5>
 					<address>
-					<strong>Your School Name</strong><br>
-					JC Main Road, Near Silnile tower<br>
-					 Pin-21542 NewYork US.</address>
+					<strong>TPQ Banyu Urip</strong><br>
+					Jl. Raya Banyu Urip No. 888<br>
+					Surabaya, Jawa Timur, Indonesia</address>
 					<p>
-						<i class="icon-phone"></i> (123) 456-789 - 1255-12584 <br>
-						<i class="icon-envelope-alt"></i> email@domainname.com
+						<i class="icon-phone"></i> 087-763-111-238 <br>
+						<i class="icon-envelope-alt"></i> tpqbanyuurip@gmail.com
 					</p>
 				</div>
 			</div>
@@ -303,7 +309,7 @@
 				<div class="col-lg-6">
 					<div class="copyright">
 						<p>
-							<span>&copy; School Educational 2015 All right reserved. By </span><a href="http://webthemez.com" target="_blank">WebThemez</a>
+							<span>&copy; TPQ Banyu Urip 2021 All right reserved. </span>
 						</p>
 					</div>
 				</div>
