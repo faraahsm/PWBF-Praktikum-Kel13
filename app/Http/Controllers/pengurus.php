@@ -14,7 +14,9 @@ class pengurus extends Controller
      */
     public function index()
     {
-        //
+        $pengurus = DB::table('pengurus')->get();
+
+        return view('dashboard.pengurus-table', ['pengurus' => $pengurus]);
     }
 
     /**

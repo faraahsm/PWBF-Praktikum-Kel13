@@ -14,7 +14,9 @@ class kemajuan extends Controller
      */
     public function index()
     {
-        //
+        $kemajuan = DB::table('kemajuan')->get();
+
+        return view('dashboard.kemajuan-table', ['kemajuan' => $kemajuan]);
     }
 
     /**

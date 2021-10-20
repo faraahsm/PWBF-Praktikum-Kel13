@@ -14,7 +14,9 @@ class detailkemajuan extends Controller
      */
     public function index()
     {
-        //
+        $detail_kemajuan = DB::table('detail_kemajuan')->get();
+
+        return view('dashboard.detail-kemajuan-table', ['detail_kemajuan' => $detail_kemajuan]);
     }
 
     /**
