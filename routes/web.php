@@ -33,6 +33,6 @@ Route::get('/daftar', function () {
 
 Route::get('/login', function () {
     return view('login', [
-        "title" => "Login"
+        "title" => "Masuk"
     ]);
 });
