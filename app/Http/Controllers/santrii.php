@@ -14,7 +14,9 @@ class santrii extends Controller
      */
     public function index()
     {
-        //
+        $santri = DB::table('santri')->get();
+
+        return view('dashboard.santri-table', ['santri' => $santri]);
     }
 
     /**
