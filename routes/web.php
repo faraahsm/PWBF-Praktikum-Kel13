@@ -19,9 +19,9 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/tentang', function () {
+Route::get('/about', function () {
     return view('about', [
-        "title" => "Tentang"
+        "title" => "about"
     ]);
 });
 

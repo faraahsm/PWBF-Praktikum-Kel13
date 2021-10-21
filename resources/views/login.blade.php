@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Techro is a modern and fully responsive Template by WebThemez.">
 	<meta name="author" content="webThemez.com">
-	<title>Techro - Flat Free Responsive bootstrap template</title>
+	<title>TPQ BANYU URIP</title>
 	<link rel="favicon" href="assets/images/favicon.png">
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -31,24 +31,22 @@
 					<img src="assets/images/logo.png" alt="Techro HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="sidebar-right.html">Right Sidebar</a></li>
-							<li><a href="#">Dummy Link1</a></li>
-							<li><a href="#">Dummy Link2</a></li>
-							<li><a href="#">Dummy Link3</a></li>
-						</ul>
-					</li>
-					<li class="active"><a href="contact.html">Contact</a></li>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href='about'>About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">pengguna<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="sidebar-right.html">santri</a></li>
+                            <li><a href="#">pengurus</a></li>
+                            <li><a href="#">buku</a></li>
+                            <li><a href="#">bab</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login">LOGIN</a></li>
 
-				</ul>
-			</div>
+                </ul>
+            </div>
 			<!--/.nav-collapse -->
 		</div>
 	</div>
@@ -63,7 +61,7 @@
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Contact us</h1>
+					<h1 class="page-title">Login</h1>
 				</header>
 
 				<p>
@@ -100,21 +98,7 @@
 			</article>
 			<!-- /Article -->
 
-			<!-- Sidebar -->
-			<aside class="col-sm-3 sidebar sidebar-right">
-
-				<div class="panel contact">
-					<h4>Address</h4>
-					<ul>
-						<li><i class="fa fa-phone"></i>1-123-345-6789</li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i>contact@webthemez.com</a></li>
-						<li><i class="fa fa-flag"></i>123 Smith Drive, Baltimore, MD 21212</li>
-					</ul>
-				</div>
-
-			</aside>
-			<!-- /Sidebar -->
-
+		
 		</div>
 	</div>
 	<!-- /container -->
