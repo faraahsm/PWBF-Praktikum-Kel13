@@ -14,7 +14,7 @@ class bab extends Controller
      */
     public function index()
     {
-        $bab = DB::table('bab')->get();
+        $bab = bab::all();
 
         return view('dashboard.bab-table', ['bab' => $bab]);
     }

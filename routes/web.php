@@ -36,3 +36,14 @@ Route::get('/login', function () {
         "title" => "Masuk"
     ]);
 });
+
+
+Route::get('pengguna', function () {
+    return view('pengguna', [
+    ]);
+});
+
+Route::get('/santri', function () {
+    return view('santri', [
+    ]);
+});

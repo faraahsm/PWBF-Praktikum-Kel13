@@ -47,7 +47,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">pengguna<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="sidebar-right.html">santri</a></li>
+                            <li><a href='pengguna'>santri</a></li>
                             <li><a href="#">pengurus</a></li>
                             <li><a href="#">buku</a></li>
                             <li><a href="#">bab</a></li>
