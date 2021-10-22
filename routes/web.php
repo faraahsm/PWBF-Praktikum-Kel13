@@ -47,3 +47,9 @@ Route::get('/santri', function () {
     return view('santri', [
     ]);
 });
+
+
+Route::get('/pengurus', function () {
+    return view('pengurus', [
+    ]);
+});
