@@ -114,11 +114,11 @@
                                     <blockquote>
                                         <div class="row">
                                             <div class="col-sm-3 text-center">
-                                                <img class="img-circle" src="assets/images/person_1.png" style="width: 100px; height: 100px;">
+                                                <img class="img-circle" src="assets/images/diba.jpeg" style="width: 100px; height: 100px;">
                                             </div>
                                             <div class="col-sm-9">
                                                 <p>Belajar disini asyik sekali, Ustadz dan Ustadzah nya baik baiik banget><</p>
-                                                <small>Arviolla, Surabaya</small>
+                                                <small>Adhiba, Surabaya</small>
                                             </div>
                                         </div>
                                     </blockquote>
@@ -128,11 +128,11 @@
                                     <blockquote>
                                         <div class="row">
                                             <div class="col-sm-3 text-center">
-                                                <img class="img-circle" src="assets/images/person_2.png" style="width: 100px; height: 100px;">
+                                                <img class="img-circle" src="assets/images/pandu.jpeg" style="width: 100px; height: 100px;">
                                             </div>
                                             <div class="col-sm-9">
                                                 <p>Alhamdulillah nyaman sekali belajar di TPQ Banyu Urip, akhirnya saya khatam Al-Quran.</p>
-                                                <small>Nabil, Sidoarjo</small>
+                                                <small>Aryo pandu, Madiun</small>
                                             </div>
                                         </div>
                                     </blockquote>
@@ -142,11 +142,11 @@
                                     <blockquote>
                                         <div class="row">
                                             <div class="col-sm-3 text-center">
-                                                <img class="img-circle" src="assets/images/person_3.png" style="width: 100px; height: 100px;">
+                                                <img class="img-circle" src="assets/images/nopi.jpeg" style="width: 100px; height: 100px;">
                                             </div>
                                             <div class="col-sm-9">
                                                 <p>Tidak hanya bisa membaca Al-Quran, saya juga jadi hafal banyak surat-surat pendek dan panjang serta wawasan saya tentang Islam bertambah pesat.</p>
-                                                <small>Nadya, Surabaya</small>
+                                                <small>Novira, Surabaya</small>
                                             </div>
                                         </div>
                                     </blockquote>

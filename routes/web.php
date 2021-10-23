@@ -44,7 +44,7 @@ Route::get('/pengguna', function () {
     ]);
 });
 
-Route::get('/pengguna/santri', function () {
+Route::get('/santri', function () {
     return view('santri', [
         "title" => "Santri"
     ]);

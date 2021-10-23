@@ -15,7 +15,7 @@
                 </header>
                 <h3>Sekilas Tentang TPQ Banyu Urip</h3>
                 <p>
-                    <img src="assets/images/about.jpg" alt="" class="img-rounded pull-right" width="300">
+                    <img src="assets/images/pembelajaran.jpeg" alt="" class="img-rounded pull-right" width="300">
                     TPQ Banyu Urip merupakan taman pendidikan Al-Quran yang berada di bawah yayasan Masjid Al-Hikmah. TPQ Banyu Urip dibuat karena melihat betapa pentingnya pendidikan Al-Quran untuk anak-anak di era modern seperti ini untuk menumbuhkan pribadi yang baik.</p>
                 <p>TPQ Banyu Urip mulai beroperasi sejak 2018. Walaupun masih seumur jagung, kami akan memberikan pembelajaran yang baik dan maksimal kepada para santri agar tujuan kami tercapai dan para santri juga mendapatkan ilmu dan manfaatnya.</p>
                 <h3>Tujuan Pembelajaran TPQ Banyu Urip</h3>
@@ -62,7 +62,7 @@
                         <!-- Image Hover Block -->
                         <div class="member-img">
                             <!-- Image  -->
-                            <img class="img-responsive" src="assets/images/photo-1.jpg" alt="">
+                            <img class="img-responsive" src="assets/images/foto3.png" alt="">
                         </div>
                         <!-- Member Details -->
                         <h4>Putri Anindyah Aziz</h4>
@@ -83,12 +83,12 @@
                         <!-- Image Hover Block -->
                         <div class="member-img">
                             <!-- Image  -->
-                            <img class="img-responsive" src="assets/images/photo-2.jpg" alt="">
+                            <img class="img-responsive" src="assets/images/foto2.png" alt="">
                         </div>
                         <!-- Member Details -->
                         <h4>Farah Salsabila Mumtaz</h4>
                         <!-- Designation -->
-                        <span class="pos">Art Director</span>
+                        <span class="pos">Art Director </span>
                         <div class="team-socials">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-google-plus"></i></a>
@@ -104,10 +104,10 @@
                         <!-- Image Hover Block -->
                         <div class="member-img">
                             <!-- Image  -->
-                            <img class="img-responsive" src="assets/images/photo-3.jpg" alt="">
+                            <img class="img-responsive" src="assets/images/photo-3.png" alt="">
                         </div>
                         <!-- Member Details -->
-                        <h4>Ranith Kays</h4>
+                        <h4>........</h4>
                         <!-- Designation -->
                         <span class="pos">Manager</span>
                         <div class="team-socials">
@@ -125,10 +125,10 @@
                         <!-- Image Hover Block -->
                         <div class="member-img">
                             <!-- Image  -->
-                            <img class="img-responsive" src="assets/images/photo-4.jpg" alt="">
+                            <img class="img-responsive" src="assets/images/photo-4.png" alt="">
                         </div>
                         <!-- Member Details -->
-                        <h4>Joan Ray</h4>
+                        <h4>......................</h4>
                         <!-- Designation -->
                         <span class="pos">Creative</span>
                         <div class="team-socials">
