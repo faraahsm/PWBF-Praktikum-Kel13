@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return view('about', [
-        "title" => "about"
+        "title" => "Tentang"
     ]);
 });
 
@@ -31,25 +31,28 @@ Route::get('/daftar', function () {
     ]);
 });
 
-Route::get('/login', function () {
-    return view('login', [
-        "title" => "Masuk"
+Route::get('/akun', function () {
+    return view('Akun', [
+        "title" => "Akun"
     ]);
 });
 
 
-Route::get('pengguna', function () {
+Route::get('/pengguna', function () {
     return view('pengguna', [
+        "title" => "Pengguna"
     ]);
 });
 
-Route::get('/santri', function () {
+Route::get('/pengguna/santri', function () {
     return view('santri', [
+        "title" => "Santri"
     ]);
 });
 
 
-Route::get('/pengurus', function () {
+Route::get('/pengguna/pengurus', function () {
     return view('pengurus', [
+        "title" => "Pengurus"
     ]);
 });
