@@ -104,7 +104,7 @@
                         <!-- Image Hover Block -->
                         <div class="member-img">
                             <!-- Image  -->
-                            <img class="img-responsive" src="assets/images/photo-3.png" alt="">
+                            <img class="img-responsive" src="assets/images/nadya.png" alt="">
                         </div>
                         <!-- Member Details -->
                         <h4>........</h4>
