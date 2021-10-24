@@ -8,7 +8,7 @@
           <!-- Button for smallest screens -->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
           <a class="navbar-brand" href="{{ url('/')}}">
-              <img src="public/assets/images/logo1.png" alt="TPQ Banyu Urip"></a>
+              <img src="assets/images/logo2.png" widht="250" height="100" alt="TPQ Banyu Urip"></a>
       </div>
 
       <div class="navbar-collapse collapse">
@@ -22,7 +22,7 @@
               <li class="dropdown">
                   <a href="{{ url('/')}}" class="dropdown-toggle" data-toggle="dropdown">Pengguna<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                      <li><a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="{{ url('/pengguna')}}">Santri</a></li>
+                      <li><a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="{{ url('/pengguna/santri')}}">Santri</a></li>
                       <li><a class="nav-link {{ ($title === "Pengurus") ? 'active' : '' }}" href="{{ url('/pengguna/pengurus')}}">Pengurus</a></li>
                       <li><a class="nav-link {{ ($title === "Buku") ? 'active' : '' }}" href="{{ url('/pengguna/buku')}}">Buku</a></li>
                       <li><a class="nav-link {{ ($title === "Bab") ? 'active' : '' }}" href="{{ url('/pengguna/bab')}}">Bab</a></li>
