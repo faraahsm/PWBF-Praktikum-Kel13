@@ -1,16 +1,18 @@
 @extends('layouts.main')
 
 @section('container')
-
-<body class="align" >
+<section>
+<body>
 	
     <link rel="stylesheet" href="assets/css/styles1.css">
 
 	<div class="grid">
-  
+		<h2>                  </h2>
 	  <form action="https://httpbin.org/post" method="POST" class="form login">
   
 		<div class="form__field">
+			<div class="row-mt-12">
+			</div>
 		  <label for="login__username"><svg class="icon">
 			  <use xlink:href="#icon-user"></use>
 			</svg><span class="hidden">Username</span></label>
@@ -49,5 +51,5 @@
 	</svg>
   
   </body>
-    
+</section>   
 @endsection

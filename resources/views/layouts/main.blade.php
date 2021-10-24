@@ -40,72 +40,71 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.cslider.js"></script>
     <script src="assets/js/custom.js"></script>
-
-    <footer id="footer">
-
-        <div class="footer1">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-6 panel contact">
-                        <h3 class="panel-title">Info Kontak</h4>
-						<div class="panel-body">
-                            <p>Hubungi kami melalui</p>
-                            <ul>
-                                <li><i class="fa fa-phone"></i>  081-457-378-273</li>
-                                <li><i class="fa fa-envelope"></i>  tpqbanyuurip@gmail.com</a></li>
-                                <li><i class="fa fa-flag"></i>  Jl. Raya Banyu Urip No.888 Surabaya</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 panel">
-                        <h3 class="panel-title">Ikuti Kami</h3>
-                        <div class="panel-body">
-                            <p class="follow-me-icons">
-                                <a href=""><i class="fa fa-twitter fa-2"></i></a>
-                                <a href=""><i class="fa fa-dribbble fa-2"></i></a>
-                                <a href=""><i class="fa fa-github fa-2"></i></a>
-                                <a href=""><i class="fa fa-facebook fa-2"></i></a>
-                                <a href=""><i class="fa fa-youtube fa-2"></i></a>
-                                <a href=""><i class="fa fa-pinterest fa-2"></i></a>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /row of panels -->
-            </div>
-        </div>
-
-        <div class="footer2">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-6 panel">
-                        <div class="panel-body">
-                            <p class="simplenav">
-                                <a href="{{ url('/')}}">Beranda</a> | 
-								<a href="{{ url('/about')}}">Tentang</a> |
-								<a href="{{ url('/login')}}">Login</a> 
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 panel">
-                        <div class="panel-body">
-                            <p class="text-right">
-                                Copyright &copy;TPQ Banyu Urip 2021 All rights reserved.</a>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /row of panels -->
-            </div>
-        </div>
-
-    </footer>
-
 </body>
+
+<footer id="footer">
+
+    <div class="footer1">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 panel contact">
+                    <h3 class="panel-title">Info Kontak</h4>
+                    <div class="panel-body">
+                        <p>Hubungi kami melalui</p>
+                        <ul>
+                            <li><i class="fa fa-phone"></i>  081-457-378-273</li>
+                            <li><i class="fa fa-envelope"></i>  tpqbanyuurip@gmail.com</a></li>
+                            <li><i class="fa fa-flag"></i>  Jl. Raya Banyu Urip No.888 Surabaya</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 panel">
+                    <h3 class="panel-title">Ikuti Kami</h3>
+                    <div class="panel-body">
+                        <p class="follow-me-icons">
+                            <a href=""><i class="fa fa-twitter fa-2"></i></a>
+                            <a href=""><i class="fa fa-dribbble fa-2"></i></a>
+                            <a href=""><i class="fa fa-github fa-2"></i></a>
+                            <a href=""><i class="fa fa-facebook fa-2"></i></a>
+                            <a href=""><i class="fa fa-youtube fa-2"></i></a>
+                            <a href=""><i class="fa fa-pinterest fa-2"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /row of panels -->
+        </div>
+    </div>
+
+    <div class="footer2">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 panel">
+                    <div class="panel-body">
+                        <p class="simplenav">
+                            <a href="{{ url('/')}}">Beranda</a> | 
+                            <a href="{{ url('/about')}}">Tentang</a> |
+                            <a href="{{ url('/login')}}">Login</a> 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 panel">
+                    <div class="panel-body">
+                        <p class="text-right">
+                            Copyright &copy;TPQ Banyu Urip 2021 All rights reserved.</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /row of panels -->
+        </div>
+    </div>
+
+</footer>
 </html>

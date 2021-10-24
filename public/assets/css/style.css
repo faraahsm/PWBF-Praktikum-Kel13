@@ -160,21 +160,20 @@ div.hbox {
     padding: 10px 15px;
 }
 
-.h-body {
-}
+
 
 .jumbotron {
-    background-color: #E0E0E0;
+    background-color: #747a80;
 }
 
 .page-header {
-    border-bottom: 1px solid #15c008;
+    border-bottom: 1px solid #ffffff;
 }
 
 .page-title {
     margin-top: 20px;
     font-weight: 300;
-    color: #15c008;
+    color: #ffffff;
 }
 
 .text-muted {
@@ -417,8 +416,7 @@ footer ul li {
     margin-bottom: 30px;
 }
 
-#portfolio {
-}
+
 
     #portfolio img {
         width: 100%;

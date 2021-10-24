@@ -2,18 +2,18 @@
 
 @section('container')
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<section>    
+    <link rel="stylesheet" href="assets/css/styles1.css">
     <style>
       html, body {
       min-height: 100%;
       }
-      body, div, form, input, select, p { 
+      body, form, input, select { 
       padding: 0;
       margin: 0;
       outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: normal;
       color: #eee;
       }
       body {
@@ -149,11 +149,11 @@
 
         </div>
         <div class="checkbox">
-          <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Poalicy for W3Docs.</a></span>
+          <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for TPQ Banyu Urip.</a></span>
         </div>
         <button type="submit" href="/">Submit</button>
       </form>
     </div>
   </body>
-
+</section>
   @endsection
