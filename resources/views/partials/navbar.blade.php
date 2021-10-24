@@ -19,11 +19,14 @@
               <li class="nav-item">
                   <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/about')}}">Tentang</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/daftar')}}">Pendaftaran</a>
+            </li>
               <li class="dropdown">
                   <a href="{{ url('/')}}" class="dropdown-toggle" data-toggle="dropdown">Pengguna<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                      <li><a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="{{ url('/pengguna/santri')}}">Santri</a></li>
-                      <li><a class="nav-link {{ ($title === "Pengurus") ? 'active' : '' }}" href="{{ url('/pengguna/pengurus')}}">Pengurus</a></li>
+                      <li><a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="{{ url('/penggunasantri')}}">Santri</a></li>
+                      <li><a class="nav-link {{ ($title === "Pengurus") ? 'active' : '' }}" href="{{ url('/penggunapengurus')}}">Pengurus</a></li>
                       <li><a class="nav-link {{ ($title === "Buku") ? 'active' : '' }}" href="{{ url('/pengguna/buku')}}">Buku</a></li>
                       <li><a class="nav-link {{ ($title === "Bab") ? 'active' : '' }}" href="{{ url('/pengguna/bab')}}">Bab</a></li>
                   </ul>

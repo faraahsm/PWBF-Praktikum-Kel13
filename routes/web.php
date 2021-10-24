@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\SantriController;
+use App\Http\Controllers\PengurusController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,15 +46,15 @@ Route::get('/pengguna', function () {
     ]);
 });
 
-Route::get('/pengguna/santri', function () {
-    return view('santri', [
-        "title" => "Santri"
+Route::get('/daftar', function () {
+    return view('pendaftaran', [
+        "title" => "Pendaftaran"
     ]);
 });
 
+//santri
+Route::get('/penggunasantri', [SantriController::class, 'index'] );
 
-Route::get('/pengguna/pengurus', function () {
-    return view('pengurus', [
-        "title" => "Pengurus"
-    ]);
-});
+//pengurus
+Route::get('/penggunapengurus', [PengurusController::class, 'index'] );
+
