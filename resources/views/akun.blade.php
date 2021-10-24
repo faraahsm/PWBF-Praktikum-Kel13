@@ -2,11 +2,11 @@
 
 @section('container')
 
-<body class="align">
+<body class="align" >
 	
     <link rel="stylesheet" href="assets/css/styles1.css">
 
-	<div class="grid" >
+	<div class="grid">
   
 	  <form action="https://httpbin.org/post" method="POST" class="form login">
   
