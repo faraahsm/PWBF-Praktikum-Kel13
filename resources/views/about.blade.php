@@ -107,7 +107,7 @@
                             <img class="img-responsive" src="assets/images/nadya.png" alt="">
                         </div>
                         <!-- Member Details -->
-                        <h4>........</h4>
+                        <h4>Nadya Lovita Sari</h4>
                         <!-- Designation -->
                         <span class="pos">Manager</span>
                         <div class="team-socials">
@@ -125,10 +125,10 @@
                         <!-- Image Hover Block -->
                         <div class="member-img">
                             <!-- Image  -->
-                            <img class="img-responsive" src="assets/images/photo-4.png" alt="">
+                            <img class="img-responsive" src="assets/images/bin.png" alt="">
                         </div>
                         <!-- Member Details -->
-                        <h4>......................</h4>
+                        <h4>Bintang Achmad Muzzakkie</h4>
                         <!-- Designation -->
                         <span class="pos">Creative</span>
                         <div class="team-socials">
