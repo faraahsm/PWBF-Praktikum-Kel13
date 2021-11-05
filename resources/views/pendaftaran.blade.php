@@ -129,23 +129,26 @@
         bagi siswa dan siswi yang ingin mendafatr di TPQ BANYU URIP 
         mengisi yang ada di bawah ini 
         </h3>
-      <form action="/">
+      <form action="{{ url('/pendaftaran')}}" method="post">
+        @csrf
         <div class="title">
           <i class="fas fa-pencil-alt"></i> 
           <h2>Daftar Disini</h2>
         </div>
         <div class="info">
-          <input class="fname" type="text" name="nama" placeholder="Nama Lengkap">
+          <input class="fname @error('Nama Lengkap') is-invalid @enderror" type="text" name="nama" placeholder="Nama Lengkap">
           <select>
-            <option value="course-type" selected>Jenis Kelamin*</option>
+            <option value="course-type" selected>Jenis Kelamin</option>
             <option value="short-courses">Perempuan</option>
             <option value="short-courses">Laki-Laki</option>
           </select>
-          <input type=date  name="tanggal lahir" placeholder="tanggal lahir">
-          <input type="password" name="kota lahir" placeholder="kota lahir">
-          <input type="password" name="nama ortu" placeholder="Nama Ortu">
-          <input type="password" name="alamat ortu" placeholder="Alamat Ortu">
-          <input type="password" name="Nomor HP" placeholder="Nomor Telepon">
+          <input type="date"  name="tanggal lahir" placeholder="Tanggal Lahir">
+          <input type="text" name="kota lahir" placeholder="Kota Lahir">
+          <input type="text" name="nama ortu" placeholder="Nama Ortu">
+          <input type="text" name="alamat ortu" placeholder="Alamat Ortu">
+          <input type="text" name="Nomor HP" placeholder="Nomor Telepon">
+          <input type="email" name="Nomor HP" placeholder="Email">
+          <input type="password" name="Nomor HP" placeholder="Password">
 
         </div>
         <div class="checkbox">

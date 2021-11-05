@@ -33,6 +33,11 @@
                         <td>{{ $pengurus->gender }}</td>
                         <td>{{ $pengurus->password}}</td>
                         <td>{{ $pengurus->aktif}}</td>
+                        <form action="{{ url('/delete-pengurus-',$pengurus->id)" method="POST">
+                            @method('delete')
+                            @csrf
+                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Delete</button></div></td>     
+                        </form>
                     </tr>
                     @endforeach
                 </tbody>

@@ -25,6 +25,7 @@
                         <th>password</th>
                         <th>tanggal masuk</th>
                         <th>aktif</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,11 @@
                         <td>{{ $santri->password}}</td>
                         <td>{{ $santri->tanggal_masuk }}</td>
                         <td>{{ $santri->aktif }}</td>
+                        <form action="{{ url('/delete-santri-',$santri->id)" method="POST">
+                            @method('delete')
+                            @csrf
+                            <td><div class="d-grid"><button class="btn btn-danger btn-block" type="submit">Delete</button></div></td>     
+                        </form>
                     </tr>
                     @endforeach
                 </tbody>

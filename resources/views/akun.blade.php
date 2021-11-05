@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="assets/css/styles1.css">
 
 	<div class="grid">
-		<h2>                  </h2>
+
+		@if(session()->has('berhasil'))
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			{{ session('berhasil') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+		@endif
+
+		<h3>                  </h3>
 	  <form action="https://httpbin.org/post" method="POST" class="form login">
   
 		<div class="form__field">
@@ -15,8 +23,8 @@
 			</div>
 		  <label for="login__username"><svg class="icon">
 			  <use xlink:href="#icon-user"></use>
-			</svg><span class="hidden">Username</span></label>
-		  <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
+			</svg><span class="hidden">Email</span></label>
+		  <input id="login__email" type="text" name="email" class="form__input" placeholder="Email" required>
 		</div>
   
 		<div class="form__field">
@@ -32,7 +40,7 @@
   
 	  </form>
   
-	  <p class="text--center">Not a member? <a href='/'>Sign up now</a> <svg class="icon">
+	  <p class="text--center">Belum jadi member? <a href="{{ url('/pendaftaran')}}">Daftar Sekarang</a> <svg class="icon">
 		  <use xlink:href="#icon-arrow-right"></use>
 		</svg></p>
   

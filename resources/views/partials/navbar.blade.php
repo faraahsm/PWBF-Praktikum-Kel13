@@ -17,10 +17,10 @@
                   <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="{{ url('/')}}">Beranda</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/about')}}">Tentang</a>
+                  <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/tentang')}}">Tentang</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/daftar')}}">Pendaftaran</a>
+                <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/pendaftaran')}}">Pendaftaran</a>
             </li>
               <li class="dropdown">
                   <a href="{{ url('/')}}" class="dropdown-toggle" data-toggle="dropdown">Pengguna<b class="caret"></b></a>
