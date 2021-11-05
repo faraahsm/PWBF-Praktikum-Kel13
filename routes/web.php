@@ -21,24 +21,23 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', function () {
+Route::get('/tentang', function () {
     return view('about', [
         "title" => "Tentang"
     ]);
 });
 
-Route::get('/daftar', function () {
-    return view('register', [
-        "title" => "Daftar"
+Route::get('/pendaftaran', function () {
+    return view('pendaftaran', [
+        "title" => "Pendaftaran"
     ]);
 });
 
 Route::get('/akun', function () {
-    return view('Akun', [
+    return view('akun', [
         "title" => "Akun"
     ]);
 });
-
 
 Route::get('/pengguna', function () {
     return view('pengguna', [
@@ -46,15 +45,13 @@ Route::get('/pengguna', function () {
     ]);
 });
 
-Route::get('/daftar', function () {
-    return view('pendaftaran', [
-        "title" => "Pendaftaran"
-    ]);
-});
-
 //santri
 Route::get('/penggunasantri', [SantriController::class, 'index'] );
+Route::delete('/delete-santri-{id}', [SantriController::class, 'destroy']);
 
 //pengurus
 Route::get('/penggunapengurus', [PengurusController::class, 'index'] );
+Route::delete('/delete-pengurus-{id}', [PengurusController::class, 'destroy']);
 
+//pendaftaran
+Route::post('/pendaftaran', [PendaftaranController::class, 'store']);
