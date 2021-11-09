@@ -18,6 +18,11 @@ class PengurusController extends Controller
         return view('pengurus',['data_pengurus' => $pengurus,"title" => "Pengurus"]);
     }
 
+    public function create()
+    {
+        return view('createpengurus');
+    }
+
     public function destroy($id)
     {
         $pengurus = pengurus::find($id);
