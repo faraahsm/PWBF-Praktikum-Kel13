@@ -31,9 +31,26 @@
                       <li><a class="nav-link {{ ($title === "Bab") ? 'active' : '' }}" href="{{ url('/pengguna/bab')}}">Bab</a></li>
                   </ul>
               </li>
+              
+              @auth
+              <li class="dropdown">
+                <a href="{{ url('/')}}" class="dropdown-toggle" data-toggle="dropdown">Hello, {{ auth()->user()->name }}<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link {{ ($title === "Dashboard") ? 'active' : '' }}" href="{{ url('/dashboard')}}">Dashboard</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button type="submit" class="dropdown-item">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+              @else    
               <li class="nav-item">
-                  <a class="nav-link {{ ($title === "Akun") ? 'active' : '' }}" href="{{ url('/akun')}}">Akun</a>
+                <a class="nav-link {{ ($title === "Login") ? 'active' : '' }}" href="{{ url('/login')}}">Login</a>
               </li>
+              @endauth
 
           </ul>
       </div>

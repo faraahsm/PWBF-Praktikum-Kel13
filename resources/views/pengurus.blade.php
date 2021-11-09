@@ -9,18 +9,20 @@
         <li class="breadcrumb-item active">Pengurus</li>
     </ol>
     <div class="card mb-4">
-      
+        <h3>   </h3>
+        <a href="{{ url('/penggunapengurus/create')}}" class="btn btn-primary">Add Data Pengurus</a>
+        <h3>   </h3>
         <div class="card-body">
             <table id="datatablesSimple" class="table table-striped">
                 <thead>
                     <tr>
                         <th>id_pengurus</th>
-                        <th>nama_pengurus</th>
-                        <th>email</th>
-                        <th>hp </th>
-                        <th>gender</th>
-                        <th>password</th>
-                        <th>aktif </th>
+                        <th>Nama Pengurus</th>
+                        <th>Email</th>
+                        <th>Nomor Telepon</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Password</th>
+                        <th>Aktif </th>
                     </tr>
                 </thead>
                 <tbody>

@@ -154,7 +154,7 @@
         <div class="checkbox">
           <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for TPQ Banyu Urip.</a></span>
         </div>
-        <button type="submit" href="/">Submit</button>
+        <button type="submit" href="{{ url('/akun')}}">Submit</button>
       </form>
     </div>
   </body>

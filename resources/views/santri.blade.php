@@ -14,17 +14,17 @@
                 <thead>
                     <tr>
                         <th>id_santri</th>
-                        <th>nama_santri</th>
-                        <th>gander</th>
-                        <th>tanggal_lhr </th>
-                        <th>kota_lhr</th>
-                        <th>nama_ortu</th>
-                        <th>alamat ortu</th>
-                        <th>hp</th>
-                        <th>email</th>
-                        <th>password</th>
-                        <th>tanggal masuk</th>
-                        <th>aktif</th>
+                        <th>Nama Santri</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Tanggal Lahir </th>
+                        <th>Kota Lahir</th>
+                        <th>Nama Ortu</th>
+                        <th>Alamat Ortu</th>
+                        <th>Nomor Telepon</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Tanggal Masuk</th>
+                        <th>Aktif</th>
                         <th>Delete</th>
                     </tr>
                 </thead>

@@ -15,16 +15,28 @@
 		  </div>
 		@endif
 
+		@if(session()->has('loginError'))
+		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			{{ session('loginError') }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		  </div>
+		@endif
+
 		<h3>                  </h3>
-	  <form action="https://httpbin.org/post" method="POST" class="form login">
-  
+	  <form action="{{ url('/akun')}}" method="POST" class="form login">
+		@csrf
 		<div class="form__field">
 			<div class="row-mt-12">
 			</div>
 		  <label for="login__username"><svg class="icon">
 			  <use xlink:href="#icon-user"></use>
 			</svg><span class="hidden">Email</span></label>
-		  <input id="login__email" type="text" name="email" class="form__input" placeholder="Email" required>
+		  <input id="login__email" type="email" name="email" class="form__input @error('email') is-invalid @enderror" placeholder="Email" required>
+		  @error('email')
+			  <div class="invalid-feedback">
+				  {{ $message }}
+			  </div>
+		  @enderror
 		</div>
   
 		<div class="form__field">
