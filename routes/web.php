@@ -33,9 +33,9 @@ Route::get('/pendaftaran', function () {
     ]);
 });
 
-Route::get('/akun', function () {
-    return view('akun', [
-        "title" => "Akun"
+Route::get('/login', function () {
+    return view('login', [
+        "title" => "Login"
     ]);
 });
 
@@ -54,4 +54,16 @@ Route::get('/penggunapengurus', [PengurusController::class, 'index'] );
 Route::delete('/delete-pengurus-{id}', [PengurusController::class, 'destroy']);
 
 //pendaftaran
+Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->middleware('guest');
 Route::post('/pendaftaran', [PendaftaranController::class, 'store']);
+
+//create pengurus
+Route::resource('/penggunapengurus/create', PengurusController::class)->middleware('auth');
+
+//login & logout
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+//dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
