@@ -46,3 +46,6 @@ Route::middleware('auth:user')->group(function () {
     Route::get('/user',[HomeController::class, "index"])->name('MainUser');
     Route::get('/about',[HomeController::class,"about"]);
 });
+
+
+

@@ -38,6 +38,7 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
     protected function unauthenticated($request, \Illuminate\Auth\AuthenticationException $exception)
     {
       if($request->expectsJson()){
@@ -46,5 +47,3 @@ class Handler extends ExceptionHandler
       return redirect(route('login'));
     }
 }
-
-

@@ -15,11 +15,11 @@ class CreatePengurus extends Migration
     {
         Schema::create('pengurus', function (Blueprint $table) {
             $table->id('id_pengurus');
-            $table->string('nama_pengurus',20);  
+            $table->string('nama_pengurus',20);
             $table->string('email',30);
-            $table->string('hp',15); 
+            $table->string('hp',15);
             $table->char('gender',1);
-            $table->char('password',32);
+            $table->string('password');
             $table->char('aktif',1);
             $table->timestamps();
         });

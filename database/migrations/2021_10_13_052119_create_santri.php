@@ -23,7 +23,7 @@ class CreateSantri extends Migration
             $table->string('alamat_ortu',100);
             $table->string('hp',15);
             $table->string('email',30);
-            $table->char('password',32);
+            $table->string('password');
             $table->date('tanggal_masuk');
             $table->char('aktif',1);
             $table->timestamps();
