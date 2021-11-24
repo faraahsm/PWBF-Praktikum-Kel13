@@ -19,7 +19,7 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
+       // $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
@@ -27,6 +27,12 @@ class RedirectIfAuthenticated
             }
         }
 
+        // if (Auth::guard('admin')->check()) {
+        //     return redirect('/dashboard');
+        // } else if (Auth::guard('user')->check()) {
+        //     return redirect(route('MainUser'));
+        // }
+        
         return $next($request);
     }
 }

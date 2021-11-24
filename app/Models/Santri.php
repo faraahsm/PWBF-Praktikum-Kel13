@@ -8,18 +8,23 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Pengurus extends Authenticatable
+class Santri extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = 'pengurus';
-    protected $primaryKey = 'id_pengurus';
+    protected $table = 'santri';
+    protected $primaryKey = 'id_santri';
     protected $fillable = [
-        "nama_pengurus",
+        "nama_santri",
         "gender",
+        "tanggal_lhr",
+        "kota_lhr",
+        "nama_ortu",
+        "alamat_ortu",
         "hp",
         "email",
         "password",
+        "tanggal_masuk",
         "aktif",
     ];
 }

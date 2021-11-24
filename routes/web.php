@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\SantriController;
-use App\Http\Controllers\PengurusController;
+use App\Http\Controllers\Dashboard\LoginController;
+use App\Http\Controllers\LandingPage\HomeController;
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\SantriController;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,57 +18,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome', [
-        "title" => "Beranda"
-    ]);
+// Landing Page
+Route::get('/',[HomeController::class,"index"])->middleware('guest');
+Route::get('/tentang',[HomeController::class,"about"])->middleware('guest');
+
+// Authentication
+Route::get('/login', [LoginController::class, "index"])->name('login')->middleware('guest');
+Route::post('/login/authenticate', [LoginController::class, "authenticate"]);
+Route::get('/logout', [LoginController::class, 'logout']);
+
+// Admin Dashboard
+Route::middleware('auth:admin')->group(function () {
+    Route::get('/dashboard',[DashboardController::class,"index"])->name('dashboard');
+
+    // santri
+    Route::get('/santri',[SantriController::class,"index"]);
+    Route::get('/form-santri',[SantriController::class,"form"]);
+    Route::post('/tambah-santri',[SantriController::class,"insert"]);
+    Route::get('/hapus-santri/{id}',[SantriController::class, 'delete']);
+    Route::get('/ubah-santri/{id}',[SantriController::class, 'formUpdate']);
+    Route::post('/ubah-santri/{id}',[SantriController::class, 'update']);
 });
 
-Route::get('/tentang', function () {
-    return view('about', [
-        "title" => "Tentang"
-    ]);
+// User Dashboard
+Route::middleware('auth:user')->group(function () {
+    // Landing Page User
+    Route::get('/user',[HomeController::class, "index"])->name('MainUser');
+    Route::get('/about',[HomeController::class,"about"]);
 });
-
-Route::get('/pendaftaran', function () {
-    return view('pendaftaran', [
-        "title" => "Pendaftaran"
-    ]);
-});
-
-Route::get('/login', function () {
-    return view('login', [
-        "title" => "Login"
-    ]);
-});
-
-Route::get('/pengguna', function () {
-    return view('pengguna', [
-        "title" => "Pengguna"
-    ]);
-});
-
-//santri
-Route::get('/penggunasantri', [SantriController::class, 'index'] );
-Route::delete('/delete-santri-{id}', [SantriController::class, 'destroy']);
-
-//pengurus
-Route::get('/penggunapengurus', [PengurusController::class, 'index'] );
-Route::delete('/delete-pengurus-{id}', [PengurusController::class, 'destroy']);
-
-//pendaftaran
-Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->middleware('guest');
-Route::post('/pendaftaran', [PendaftaranController::class, 'store']);
-
-//create pengurus
-Route::resource('/penggunapengurus/create', PengurusController::class)->middleware('auth');
-
-//login & logout
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
-
-//dashboard
-Route::get('/dashboard', function() {
-    return view('dashboard');
-})->middleware('auth');
