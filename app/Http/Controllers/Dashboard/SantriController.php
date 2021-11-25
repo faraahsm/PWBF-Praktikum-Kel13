@@ -4,14 +4,14 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\ModelSantri;
+use App\Models\Santri;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\QueryException;
 
 class SantriController extends Controller
 {
     public function index(){
-        $allSantri=ModelSantri::all();
+        $allSantri=Santri::all();
         return view('Dashboard/santri',["data_santri" => $allSantri,"title" => "santri"]);
     }
 
@@ -20,12 +20,12 @@ class SantriController extends Controller
     }
 
     public function delete($idSantri){
-        ModelSantri::find($idSantri)->delete();
+        Santri::find($idSantri)->delete();
         return redirect('/santri');
     }
 
     public function formUpdate($idSantri){
-        $santri = ModelSantri::where('id_santri', $idSantri)->first();
+        $santri = Santri::where('id_santri', $idSantri)->first();
         if($santri == null){
             return redirect("/santri");
         }
@@ -48,7 +48,7 @@ class SantriController extends Controller
         ]);
 
         try{
-            $santri = ModelSantri::findOrFail($idSantri);
+            $santri = Santri::findOrFail($idSantri);
             $santri->update($validation);
 
             return redirect("/santri");
@@ -77,7 +77,7 @@ class SantriController extends Controller
         $validation["password"] = Hash::make($validation["password"]);
 
         try{
-            ModelSantri::create($validation);
+            Santri::create($validation);
             return redirect("/dashboard");
         }catch(QueryException $err){
             dd($err);
