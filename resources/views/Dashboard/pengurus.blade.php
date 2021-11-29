@@ -60,8 +60,15 @@
         <h1 class="h2">Dashboard</h1>
       </div>
     <div class="container-fluid px-4">
-    <h3 class="mt-4">Data Santri</h3>
-    <a href="/form-santri" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
+    <h3 class="mt-4">Data Pengurus</h3>
+
+    @if (session()->get( 'err'))
+     <div class="alert alert-danger" role="alert">
+        Pengurus ini berelasi dengan data kemajuan !!!
+      </div>
+      @endif
+
+    <a href="/form-pengurus" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
     <div class="card mb-4">
         <div class="card-body table-responsive">
             <table id="table_id" class="table">
@@ -69,36 +76,24 @@
                     <tr>
                         <th>Nama</th>
                         <th>Jenis Kelamin</th>
-                        <th>Tgl Lahir</th>
-                        <th>Kota</th>
-                        <th>Nama Ortu</th>
-                        <th>Alamat Ortu</th>
-                        <th>Nomor Telepon</th>
+                        <th>No HP</th>
                         <th>Email</th>
-                        <th>Tanggal Masuk</th>
-                        <th>Status</th>
                         <th>Hapus</th>
                         <th>Ubah</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data_santri as $santri)
+                    @foreach ($data as $pengurus)
                     <tr>
-                        <td>{{ $santri->nama_santri}}</td>
-                        <td>{{ $santri->gender}}</td>
-                        <td>{{ $santri->tanggal_lhr }}</td>
-                        <td>{{ $santri->kota_lhr }}</td>
-                        <td>{{ $santri->nama_ortu }}</td>
-                        <td>{{ $santri->alamat_ortu}}</td>
-                        <td>{{ $santri->hp}}</td>
-                        <td>{{ $santri->email }}</td>
-                        <td>{{ $santri->tanggal_masuk }}</td>
-                        <td>{{ $santri->aktif }}</td>
+                        <td>{{ $pengurus->nama_pengurus}}</td>
+                        <td>{{ $pengurus->gender}}</td>
+                        <td>{{ $pengurus->hp }}</td>
+                        <td>{{ $pengurus->email }}</td>
                         <td>
-                        <a href="/hapus-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-danger">Hapus</a>
+                        <a href="/hapus-pengurus/<?=$pengurus->id_pengurus ?>" class="btn btn-sm btn-danger">Hapus</a>
                         </td>
                         <td>
-                        <a href="/ubah-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-warning">Ubah</a>
+                        <a href="/ubah-pengurus/<?=$pengurus->id_pengurus ?>" class="btn btn-sm btn-warning">Ubah</a>
                         </td>
                     </tr>
                     @endforeach

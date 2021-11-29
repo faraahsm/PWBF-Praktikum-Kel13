@@ -15,7 +15,7 @@ class CreateBab extends Migration
     {
         Schema::create('bab', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('FK_Id_buku')->constrained('buku','id_buku');
+            $table->foreignId('FK_Id_buku')->constrained('buku','id');
             $table->string('bab',50);
             $table->string('judul',100);
             $table->longText('keterangan');

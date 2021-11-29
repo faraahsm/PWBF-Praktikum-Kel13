@@ -15,7 +15,7 @@ class CreateDetailkemajuan extends Migration
     {
         Schema::create('detailkemajuan', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('FK_Id_kemajuan')->constrained('kemajuan');
+            $table->foreignId('FK_Id_kemajuan')->constrained('kemajuan')->onDelete('cascade');
             $table->foreignId('FK_Id_bab')->constrained('bab');
             $table->longText('keterangan');
             $table->timestamps();

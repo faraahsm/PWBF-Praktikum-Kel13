@@ -16,20 +16,21 @@
               <li class="nav-item">
                   <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="{{ url('/')}}">Beranda</a>
               </li>
-              @auth
-              <li class="nav-item">
+              @if (Auth::user())
+                <li class="nav-item">
                   <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/about')}}">Tentang</a>
-              </li>
+                </li>
               @else
               <li class="nav-item">
                   <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="{{ url('/tentang')}}">Tentang</a>
               </li>
-              @endauth
+              @endif
               @auth
               <li class="dropdown">
                 <a href="{{ url('/')}}" class="dropdown-toggle" data-toggle="dropdown">Hello, {{ __(Auth::user()->nama_santri) }}<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link {{ ($title === "Dashboard") ? 'active' : '' }}" href="{{ url('/dashboard')}}">Dashboard</a></li>
+                    <li><a class="nav-link {{ ($title === "Dashboard-santri") ? 'active' : '' }}" href="{{ url('/user-dashboard')}}">Dashboard</a></li>
+                    <li><a class="nav-link {{ ($title === "Detail-Pengurus") ? 'active' : '' }}" href="{{ url('/detail-pengurus')}}">Detail Pengurus</a></li>
                     <li>
                         <a href="/logout">Logout</a>
                     </li>

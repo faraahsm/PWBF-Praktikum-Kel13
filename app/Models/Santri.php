@@ -27,4 +27,10 @@ class Santri extends Authenticatable
         "tanggal_masuk",
         "aktif",
     ];
+
+    // Relationships
+    public function santriKemajuans(){
+        // having many kemajuans
+        return $this->hasMany(Kemajuan::class, 'FK_Id_santri', 'id_santri');
+    }
 }

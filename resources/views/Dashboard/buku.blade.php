@@ -60,45 +60,45 @@
         <h1 class="h2">Dashboard</h1>
       </div>
     <div class="container-fluid px-4">
-    <h3 class="mt-4">Data Santri</h3>
-    <a href="/form-santri" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
+    <h3 class="mt-4">Data Buku</h3>
+     @if (session()->get( 'err'))
+     <div class="alert alert-danger" role="alert">
+        Buku ini berelasi dengan data kemajuan !!!
+      </div>
+      @endif
+    <a href="/form-buku" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
+    @if ($data->isNotEmpty())
+        <a href="/form-bab" class="btn btn-primary btn-sm mb-2">Tambah Data Bab</a>
+    @endif
     <div class="card mb-4">
         <div class="card-body table-responsive">
             <table id="table_id" class="table">
                 <thead>
                     <tr>
-                        <th>Nama</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Tgl Lahir</th>
-                        <th>Kota</th>
-                        <th>Nama Ortu</th>
-                        <th>Alamat Ortu</th>
-                        <th>Nomor Telepon</th>
-                        <th>Email</th>
-                        <th>Tanggal Masuk</th>
-                        <th>Status</th>
+                        <th>Buku</th>
+                        <th>keterangan</th>
+                        <th>Created At</th>
+                        <th>Update At</th>
+                        <th>Bab</th>
                         <th>Hapus</th>
                         <th>Ubah</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data_santri as $santri)
+                    @foreach ($data as $row)
                     <tr>
-                        <td>{{ $santri->nama_santri}}</td>
-                        <td>{{ $santri->gender}}</td>
-                        <td>{{ $santri->tanggal_lhr }}</td>
-                        <td>{{ $santri->kota_lhr }}</td>
-                        <td>{{ $santri->nama_ortu }}</td>
-                        <td>{{ $santri->alamat_ortu}}</td>
-                        <td>{{ $santri->hp}}</td>
-                        <td>{{ $santri->email }}</td>
-                        <td>{{ $santri->tanggal_masuk }}</td>
-                        <td>{{ $santri->aktif }}</td>
+                        <td>{{ $row->buku}}</td>
+                        <td>{{ $row->keterangan}}</td>
+                        <td>{{ $row->created_at }}</td>
+                        <td>{{ $row->updated_at }}</td>
                         <td>
-                        <a href="/hapus-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-danger">Hapus</a>
+                        <a href="/show-bab/<?=$row->id ?>" class="btn btn-sm btn-primary">Detail</a>
                         </td>
                         <td>
-                        <a href="/ubah-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-warning">Ubah</a>
+                        <a href="/hapus-buku/<?=$row->id ?>" class="btn btn-sm btn-danger">Hapus</a>
+                        </td>
+                        <td>
+                        <a href="/ubah-buku/<?=$row->id ?>" class="btn btn-sm btn-warning">Ubah</a>
                         </td>
                     </tr>
                     @endforeach
@@ -106,6 +106,39 @@
             </table>
         </div>
     </div>
+
+    @if (Request::is('show-bab/*'))
+    <h3 class="mt-4">Data Bab</h3>
+    <div class="card mb-4">
+        <div class="card-body table-responsive">
+            <table id="table_id" class="table">
+                <thead>
+                    <tr>
+                        <th>Buku</th>
+                        <th>Bab</th>
+                        <th>Judul</th>
+                        <th>Keterangan</th>
+                        <th>Hapus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($bab as $row)
+                    <tr>
+                        <td>{{ $row->Buku->buku }}</td>
+                        <td>{{ $row->bab }}</td>
+                        <td>{{ $row->judul }}</td>
+                        <td>{{ $row->keterangan }}</td>
+                        <td>
+                        <a href="/hapus-bab/<?=$row->id ?>" class="btn btn-sm btn-danger">Hapus</a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @endif
+
   </div>
     </main>
   </div>

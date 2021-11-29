@@ -8,25 +8,25 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="santri">
+            <a class="nav-link" href="/santri">
               <span data-feather="file"></span>
               Santri
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/pengurus">
               <span data-feather="shopping-cart"></span>
               Pengurus
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/buku">
               <span data-feather="users"></span>
               Buku
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/kemajuan">
               <span data-feather="users"></span>
               Kemajuan
             </a>

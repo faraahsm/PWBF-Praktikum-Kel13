@@ -22,4 +22,10 @@ class Pengurus extends Authenticatable
         "password",
         "aktif",
     ];
+
+    // Relationships
+    public function pengurusKemajuans(){
+        // having many kemajuans
+        return $this->hasMany(Kemajuan::class, 'FK_Id_pengurus', 'id_pengurus');
+    }
 }

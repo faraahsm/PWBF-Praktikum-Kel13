@@ -58,60 +58,52 @@
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
       </div>
-      <form method="POST" action="/tambah-santri">
+    {{-- menampilkan error validasi --}}
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+      <form method="POST" action="/tambah-kemajuan">
           @csrf
               <div class="row">
                   <div class="col-lg-6">
                       <div class="form-group">
-                          <label for="name">Nama Santri</label>
-                          <input type="text" class="form-control" id="name" name="nama_santri">
+                          <label for="name">Nama Pengurus</label>
+                          <input type="text" class="form-control" id="name" name="FK_Id_pengurus" value="{{__(Auth::user()->id_pengurus)}}" readonly>
                       </div>
                       <div class="form-group">
-                          <label for="tgl_lahir">Tgl Lahir</label>
-                          <input type="date" class="form-control" id="tgl_lahir" name="tanggal_lhr">
-                      </div>
-                      <div class="form-group">
-                      <label for="gender">Gender</label>
-                          <select class="form-control" id="gender" name="gender">
-                          <option>L</option>
-                          <option>P</option>
+                        <label for="santri">Santri</label>
+                          <select class="form-control" id="santri" name="FK_Id_santri" required>
+                            @foreach ( $santri as $row )
+                                <option value="{{$row->id_santri}}">{{ $row->nama_santri }}</option>
+                            @endforeach
                           </select>
                       </div>
                       <div class="form-group">
-                          <label for="kota_lahir">Kota Lahir</label>
-                          <input type="text" class="form-control" id="kota_lahir" name="kota_lhr">
+                        <label for="bab">Bab</label>
+                          <select class="form-control" id="bab" name="FK_Id_bab" required>
+                            @foreach ( $bab as $row )
+                                <option value="{{$row->Buku->id . "&" . $row->id}}">{{ "Buku : " . $row->Buku->buku . " || Bab : " . $row->bab}}</option>
+                            @endforeach
+                          </select>
                       </div>
                       <div class="form-group">
-                          <label for="nama_ortu">Nama Ortu</label>
-                          <input type="text" class="form-control" id="nama_ortu" aria-describedby="emailHelp" name="nama_ortu">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-6">
-                      <div class="form-group">
-                          <label for="alamat_ortu">Alamat Ortu</label>
-                          <input type="text" class="form-control" id="alamat_ortu" name="alamat_ortu">
+                          <label for="tgl">Tanggal</label>
+                          <input type="date" class="form-control" id="tgl" name="tanggal">
                       </div>
                       <div class="form-group">
-                          <label for="no_hp">No HP</label>
-                          <input type="text" class="form-control" id="hp" name="hp">
+                          <label for="status">Status</label>
+                          <input type="text" class="form-control" id="status" name="status">
                       </div>
-
                       <div class="form-group">
-                          <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email" name="email">
+                          <label for="keterangan">Keterangan</label>
+                          <input type="text" class="form-control" id="keterangan" name="keterangan">
                       </div>
-
-                      <div class="form-group">
-                          <label for="tgl_masuk">Tgl Masuk</label>
-                          <input type="date" class="form-control" id="tgl_masuk" name="tanggal_masuk">
-                      </div>
-
-                      <div class="form-group">
-                          <label for="status_aktif">Status AKtif</label>
-                          <input type="text" class="form-control" id="status_aktif" name="aktif">
-                      </div>
-
                   </div>
                   <div class="row">
                     <div class="col-lg-6">

@@ -60,45 +60,35 @@
         <h1 class="h2">Dashboard</h1>
       </div>
     <div class="container-fluid px-4">
-    <h3 class="mt-4">Data Santri</h3>
-    <a href="/form-santri" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
+    <h3 class="mt-4">Data Kemajuan</h3>
+    <a href="/form-kemajuan" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
     <div class="card mb-4">
         <div class="card-body table-responsive">
             <table id="table_id" class="table">
                 <thead>
                     <tr>
-                        <th>Nama</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Tgl Lahir</th>
-                        <th>Kota</th>
-                        <th>Nama Ortu</th>
-                        <th>Alamat Ortu</th>
-                        <th>Nomor Telepon</th>
-                        <th>Email</th>
-                        <th>Tanggal Masuk</th>
+                        <th>Nama Santri</th>
+                        <th>Nama Pengurus</th>
+                        <th>Buku</th>
+                        <th>Bab</th>
+                        <th>Tanggal</th>
                         <th>Status</th>
-                        <th>Hapus</th>
-                        <th>Ubah</th>
+                        <th>Keterangan</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data_santri as $santri)
+                    @foreach ($data as $kemajuan)
                     <tr>
-                        <td>{{ $santri->nama_santri}}</td>
-                        <td>{{ $santri->gender}}</td>
-                        <td>{{ $santri->tanggal_lhr }}</td>
-                        <td>{{ $santri->kota_lhr }}</td>
-                        <td>{{ $santri->nama_ortu }}</td>
-                        <td>{{ $santri->alamat_ortu}}</td>
-                        <td>{{ $santri->hp}}</td>
-                        <td>{{ $santri->email }}</td>
-                        <td>{{ $santri->tanggal_masuk }}</td>
-                        <td>{{ $santri->aktif }}</td>
+                        <td>{{ $kemajuan->kemajuanSantris->nama_santri }}</td>
+                        <td>{{ $kemajuan->kemajuanPenguruses->nama_pengurus }}</td>
+                        <td>{{ $kemajuan->detailKemajuans[0]->detailKemajuanBabs->Buku->buku }}</td>
+                        <td>{{ $kemajuan->detailKemajuans[0]->detailKemajuanBabs->bab }}</td>
+                        <td>{{ $kemajuan->tanggal }}</td>
+                        <td>{{ $kemajuan->status }}</td>
+                        <td>{{ $kemajuan->detailKemajuans[0]->keterangan }}</td>
                         <td>
-                        <a href="/hapus-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-danger">Hapus</a>
-                        </td>
-                        <td>
-                        <a href="/ubah-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-warning">Ubah</a>
+                        <a href="/hapus-kemajuan/<?=$kemajuan->id ?>" class="btn btn-sm btn-danger">Hapus</a>
                         </td>
                     </tr>
                     @endforeach

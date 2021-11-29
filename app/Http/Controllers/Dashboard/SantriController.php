@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\DetailKemajuan;
 use Illuminate\Http\Request;
 use App\Models\Santri;
+use App\Models\Kemajuan;
+use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\QueryException;
 
@@ -20,8 +23,12 @@ class SantriController extends Controller
     }
 
     public function delete($idSantri){
-        Santri::find($idSantri)->delete();
-        return redirect('/santri');
+        try {
+            Santri::find($idSantri)->delete();
+            return redirect('/santri');
+        } catch (Exception $err) {
+            dd($err);
+        }
     }
 
     public function formUpdate($idSantri){

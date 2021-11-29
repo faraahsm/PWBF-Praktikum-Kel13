@@ -58,58 +58,17 @@
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
       </div>
-      <form method="POST" action="/tambah-santri">
+      <form method="POST" action="/tambah-buku">
           @csrf
               <div class="row">
                   <div class="col-lg-6">
                       <div class="form-group">
-                          <label for="name">Nama Santri</label>
-                          <input type="text" class="form-control" id="name" name="nama_santri">
+                          <label for="name">Nama Buku</label>
+                          <input type="text" class="form-control" id="name" name="buku">
                       </div>
                       <div class="form-group">
-                          <label for="tgl_lahir">Tgl Lahir</label>
-                          <input type="date" class="form-control" id="tgl_lahir" name="tanggal_lhr">
-                      </div>
-                      <div class="form-group">
-                      <label for="gender">Gender</label>
-                          <select class="form-control" id="gender" name="gender">
-                          <option>L</option>
-                          <option>P</option>
-                          </select>
-                      </div>
-                      <div class="form-group">
-                          <label for="kota_lahir">Kota Lahir</label>
-                          <input type="text" class="form-control" id="kota_lahir" name="kota_lhr">
-                      </div>
-                      <div class="form-group">
-                          <label for="nama_ortu">Nama Ortu</label>
-                          <input type="text" class="form-control" id="nama_ortu" aria-describedby="emailHelp" name="nama_ortu">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-6">
-                      <div class="form-group">
-                          <label for="alamat_ortu">Alamat Ortu</label>
-                          <input type="text" class="form-control" id="alamat_ortu" name="alamat_ortu">
-                      </div>
-                      <div class="form-group">
-                          <label for="no_hp">No HP</label>
-                          <input type="text" class="form-control" id="hp" name="hp">
-                      </div>
-
-                      <div class="form-group">
-                          <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email" name="email">
-                      </div>
-
-                      <div class="form-group">
-                          <label for="tgl_masuk">Tgl Masuk</label>
-                          <input type="date" class="form-control" id="tgl_masuk" name="tanggal_masuk">
-                      </div>
-
-                      <div class="form-group">
-                          <label for="status_aktif">Status AKtif</label>
-                          <input type="text" class="form-control" id="status_aktif" name="aktif">
+                          <label for="ket">Keterangan</label>
+                          <input type="text" class="form-control" id="ket" name="keterangan">
                       </div>
 
                   </div>
