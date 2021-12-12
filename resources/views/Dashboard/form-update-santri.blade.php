@@ -74,7 +74,7 @@
                       <label for="gender">Gender</label>
                           <select class="form-control" id="gender" name="gender">
                           <option {{ ($data['gender'] === 'L') ? 'selected' : '' }}>L</option>
-                          <option{{ ($data['gender'] === 'P') ? 'selected' : '' }}>P</option>
+                          <option {{ ($data['gender'] === 'P') ? 'selected' : '' }}>P</option>
                           </select>
                       </div>
                       <div class="form-group">

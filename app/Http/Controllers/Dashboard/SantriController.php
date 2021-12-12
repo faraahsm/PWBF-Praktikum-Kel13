@@ -32,7 +32,7 @@ class SantriController extends Controller
     }
 
     public function formUpdate($idSantri){
-        $santri = Santri::where('id_santri', $idSantri)->first();
+        $santri = Santri::find($idSantri);
         if($santri == null){
             return redirect("/santri");
         }
@@ -51,11 +51,11 @@ class SantriController extends Controller
             "email" => ["required"],
             "tanggal_masuk" => ["required", "date"],
             "aktif" => ["required"],
-            "password" => ["min:6", "max:16"],
+            "password" => ["min:6", "max:100"],
         ]);
 
         try{
-            $santri = Santri::findOrFail($idSantri);
+            $santri = Santri::find($idSantri);
             $santri->update($validation);
 
             return redirect("/santri");
@@ -76,7 +76,7 @@ class SantriController extends Controller
             "email" => ["required"],
             "tanggal_masuk" => ["required", "date"],
             "aktif" => ["required"],
-            "password" => ["min:6", "max:16"],
+            "password" => ["min:6", "max:100"],
         ]);
 
 
@@ -85,7 +85,7 @@ class SantriController extends Controller
 
         try{
             Santri::create($validation);
-            return redirect("/dashboard");
+            return redirect("/santri");
         }catch(QueryException $err){
             dd($err);
         }
