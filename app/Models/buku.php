@@ -11,7 +11,8 @@ class Buku extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         "buku",
-        "keterangan"
+        "keterangan",
+        "gambar"
     ];
 
         // Relationships

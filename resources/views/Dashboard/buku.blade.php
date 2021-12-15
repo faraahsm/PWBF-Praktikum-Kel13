@@ -76,7 +76,8 @@
                 <thead>
                     <tr>
                         <th>Buku</th>
-                        <th>keterangan</th>
+                        <th>Keterangan</th>
+                        <th>Gambar</th>
                         <th>Created At</th>
                         <th>Update At</th>
                         <th>Bab</th>
@@ -89,6 +90,7 @@
                     <tr>
                         <td>{{ $row->buku}}</td>
                         <td>{{ $row->keterangan}}</td>
+                        <td><img src="uploads/{{ $row->gambar}}"></td>
                         <td>{{ $row->created_at }}</td>
                         <td>{{ $row->updated_at }}</td>
                         <td>

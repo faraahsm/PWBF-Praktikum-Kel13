@@ -66,10 +66,18 @@
                           <label for="name">Nama Buku</label>
                           <input type="text" class="form-control" id="name" name="buku">
                       </div>
+                      <h5> </h5>
                       <div class="form-group">
                           <label for="ket">Keterangan</label>
                           <input type="text" class="form-control" id="ket" name="keterangan">
                       </div>
+                      <form action="upload.php" method="POST" enctype="multipart/form-data">
+                        <h5> </h5>
+                        <div class="form-group">
+                        <label for="ket">Upload Gambar</label>
+                        <input type="file" class="form-control" id="gam" name="gambar">
+                        </div>
+                      </form>
 
                   </div>
                   <div class="row">
