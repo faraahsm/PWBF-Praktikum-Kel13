@@ -90,7 +90,7 @@
                     <tr>
                         <td>{{ $row->buku}}</td>
                         <td>{{ $row->keterangan}}</td>
-                        <td><img src="uploads/{{ $row->gambar}}"></td>
+                        <td>{{ $row->gambar}}</td>
                         <td>{{ $row->created_at }}</td>
                         <td>{{ $row->updated_at }}</td>
                         <td>
