@@ -35,6 +35,7 @@
                 <a class="nav-link text-putih {{ ($title === "Login") ? 'active' : '' }}" href="{{route('login')}}">Login</a>
               </li>
               @endauth
+              
 
           </ul>
       </div>

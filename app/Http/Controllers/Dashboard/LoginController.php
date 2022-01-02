@@ -29,6 +29,10 @@ class LoginController extends Controller
             $request->session()->regenerate();
             return redirect()->intended(route('MainUser'));
         }
+        else if(Auth::guard('guru')->attempt($credentials)){
+            $request->session()->regenerate();
+            return redirect()->intended(route('dashboard'));
+        }
         return back()->with(['loginError' => 'Email atau Password salah']);
     }
 
@@ -39,6 +43,12 @@ class LoginController extends Controller
             $request->session()->regenerateToken();
             return redirect('/');
         }else if(Auth::guard('user')->check()){
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect('/');
+        }
+        else if(Auth::guard('guru')->check()){
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();

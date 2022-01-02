@@ -7,6 +7,7 @@ use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\SantriController;
 use App\Http\Controllers\Dashboard\PengurusController;
 use App\Http\Controllers\Dashboard\KemajuanController;
+use App\Http\Controllers\Dashboard\GuruController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -97,4 +98,38 @@ Route::middleware('auth:user')->group(function () {
 });
 
 
+// Admin Dashboard
+Route::middleware('auth:guru')->group(function () {
+    Route::get('/dashboard',[DashboardController::class,"index"])->name('dashboard');
 
+  // santri
+  Route::get('/santri',[SantriController::class,"index"]);
+  Route::get('/form-santri',[SantriController::class,"form"]);
+  Route::post('/tambah-santri',[SantriController::class,"insert"]);
+  Route::get('/hapus-santri/{id}',[SantriController::class, 'delete']);
+  Route::get('/ubah-santri/{id}',[SantriController::class, 'formUpdate']);
+  Route::post('/ubah-santri/{id}',[SantriController::class, 'update']);
+
+// buku
+Route::get('/buku', [BukuController::class, 'index']);
+Route::get('/form-buku',[BukuController::class, "form"]);
+Route::post('/tambah-buku',[BukuController::class,"tambahBuku"]);
+Route::get('/hapus-buku/{id}',[BukuController::class, 'hapusBuku']);
+Route::get('/ubah-buku/{id}',[BukuController::class, 'show']);
+Route::post('/ubah-buku/{id}',[BukuController::class, 'update']);
+
+// bab
+Route::get('/show-bab/{id}',[BukuController::class, "showBab"])->name('bab');
+Route::get('/form-bab',[BukuController::class, "bab"]);
+Route::post('/tambah-bab',[BukuController::class,"tambahBab"]);
+Route::get('/hapus-bab/{id}',[BukuController::class, 'hapusBab']);
+
+// kemajuan
+Route::get('/form-kemajuan',[KemajuanController::class, "form"]);
+Route::post('/tambah-kemajuan',[KemajuanController::class, "tambah"]);
+Route::get('/kemajuan', [KemajuanController::class, "index"]);
+Route::get('/hapus-kemajuan/{id}',[KemajuanController::class, 'hapus']);
+
+//guru 
+Route::get('/guru',[GuruController::class, "index"]);
+});

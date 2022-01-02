@@ -50,9 +50,9 @@ return [
           'driver' => 'session',
           'provider' => 'user',
         ],
-        'walmur' => [
+        'guru' => [
             'driver' => 'session',
-            'provider' => 'walmur',
+            'provider' => 'guru',
           ],
     ],
 
@@ -89,9 +89,9 @@ return [
           'model' => App\Models\Pengurus::class,
         ],
 
-        'walmur' => [
+        'guru' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Walmur::class,
+            'model' => App\Models\Guru::class,
           ],
     ],
 

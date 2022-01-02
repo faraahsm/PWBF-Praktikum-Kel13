@@ -31,6 +31,14 @@
               Kemajuan
             </a>
           </li>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{ ($title === "guru") ? 'active' : '' }}" href="/guru">
+          <span data-feather="file"></span>
+          Guru
+        </a>
+      </li>
         </ul>
       </div>
     </nav>
