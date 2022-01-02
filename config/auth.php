@@ -50,6 +50,10 @@ return [
           'driver' => 'session',
           'provider' => 'user',
         ],
+        'walmur' => [
+            'driver' => 'session',
+            'provider' => 'walmur',
+          ],
     ],
 
     /*
@@ -84,6 +88,11 @@ return [
           'driver' => 'eloquent',
           'model' => App\Models\Pengurus::class,
         ],
+
+        'walmur' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Walmur::class,
+          ],
     ],
 
     /*

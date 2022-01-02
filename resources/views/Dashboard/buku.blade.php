@@ -75,8 +75,6 @@
                         <th>Buku</th>
                         <th>Keterangan</th>
                         <th>Gambar</th>
-                        <th>Created At</th>
-                        <th>Update At</th>
                         <th>Bab</th>
                         <th>Hapus</th>
                         <th>Ubah</th>
@@ -87,9 +85,7 @@
                     <tr>
                         <td>{{ $row->buku}}</td>
                         <td>{{ $row->keterangan}}</td>
-                        <td img src="{{ asset('storage/'. $row->gambar) }}" >{{ $row->gambar}}</td>
-                        <td>{{ $row->created_at }}</td>
-                        <td>{{ $row->updated_at }}</td>
+                        <td><img src="uploads/{{ $row->gambar }}" style="width:300px;"></td>
                         <td>
                         <a href="/show-bab/<?=$row->id ?>" class="btn btn-sm btn-primary">Detail</a>
                         </td>

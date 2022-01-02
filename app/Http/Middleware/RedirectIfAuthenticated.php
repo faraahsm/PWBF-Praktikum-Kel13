@@ -31,8 +31,9 @@ class RedirectIfAuthenticated
             return redirect('/dashboard');
         } else if (Auth::guard('user')->check()) {
             return redirect(route('MainUser'));
+        }else if (Auth::guard('walmur')->check()) {
+            return redirect(route('MainUser'));
         }
-
         return $next($request);
     }
 }

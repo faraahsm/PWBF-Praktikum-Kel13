@@ -7,6 +7,8 @@ use App\Models\Bab;
 use Illuminate\Http\Request;
 use App\Models\Buku;
 use Exception;
+use Illuminate\Support\Facades\DB;
+
 
 class BukuController extends Controller
 {
@@ -54,15 +56,32 @@ class BukuController extends Controller
         $validation = $request->validate([
             "buku" => ["required", "min:3", "max:49"],
             "keterangan" => ["required"],
-            "gambar" => ["required", "image", "file", "max:1024"]
+            "gambar" => 'image|file|max:1024'
+
         ]);
 
-        try {
-            Buku::create($validation);
-            return redirect('/buku');
-        } catch (Exception $err) {
-            dd($err);
-        }
+        $file = $request->file('gambar');
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["gambar"]["name"]);
+        
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        $file->move($target_dir,$file->getClientOriginalName());
+
+
+        DB::table('buku')->insert([
+            'buku'              => $validation['buku'],
+            'keterangan'        => $validation['keterangan'],
+            'gambar'             => basename($_FILES["gambar"]["name"]),
+            ]);
+            
+        return redirect('/buku');
+    
+        // try {
+        //     Buku::create($validation);
+        //     return redirect('/buku');
+        // } catch (Exception $err) {
+        //     dd($err);
+        // }
     }
 
     public function update(Request $request, $id){
@@ -71,7 +90,8 @@ class BukuController extends Controller
         $validation = $request->validate([
             "buku" => ["required", "min:3", "max:49"],
             "keterangan" => ["required"],
-            "gambar" => ["required", "image", "file", "max:1024"]
+            "gambar" => 'image|file|max:1024'
+
         ]);
 
         try {
