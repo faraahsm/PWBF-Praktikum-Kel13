@@ -82,7 +82,7 @@
                           <input type="email" class="form-control" id="email" name="email" value={{$data->email}}>
                       </div>
                       <div class="form-group">
-                          <label>Status AKtif</label>
+                          <label>Status Aktif</label>
                           <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif" value={{$data->aktif}} >
                       </div>
                   </div>

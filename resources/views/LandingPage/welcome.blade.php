@@ -42,7 +42,7 @@
     <div class="jumbotron">
         <div class="container">
 
-            <h3 class="text-center">Pembelajaran kami</h3>
+            <h3 class="text-center text-putih">Pembelajaran kami</h3>
 
             <div class="row">
                 <div class="col-md-3 col-sm-6 highlight">

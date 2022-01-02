@@ -2,7 +2,7 @@
 
 @section('container')
 
-    <header id="head" class="secondary"></header>
+    {{-- <header id="head" class="secondary"></header> --}}
 
     <!-- container -->
     <div class="container">

@@ -7,7 +7,7 @@
     <meta name="description" content="Techro is a modern and fully responsive Template by WebThemez.">
     <meta name="author" content="webThemez.com">
     <title> TPQ Banyu Urip | {{ $title }}</title>
-    <link rel="favicon" href="assets/images/favicon.png">
+    {{-- <link rel="favicon" href="assets/images/favicon.png"> --}}
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -87,7 +87,7 @@
                     <div class="panel-body">
                         <p class="simplenav">
                             <a href="{{ url('/')}}">Beranda</a> |
-                            <a href="{{ url('/about')}}">Tentang</a> |
+                            <a href="{{ url('/tentang')}}">Tentang</a> |
                             <a href="{{ url('/login')}}">Login</a>
                         </p>
                     </div>

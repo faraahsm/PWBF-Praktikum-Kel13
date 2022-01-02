@@ -82,7 +82,7 @@
                           <input type="email" class="form-control" id="email" name="email">
                       </div>
                       <div class="form-group">
-                          <label for="nama_ortu">Status AKtif</label>
+                          <label for="nama_ortu">Status Aktif</label>
                           <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif">
                       </div>
                   </div>

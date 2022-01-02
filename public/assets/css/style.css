@@ -18,6 +18,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', sans-serif;
 }
 
+.text-putih{
+    color: white !important;
+}
+
+.img-logo{
+    display: block;
+    position: relative;
+    top: -25px;
+}
+
 h1, .h1, h2, .h2, h3, .h3 {
     margin-top: 30px;
 }
@@ -35,7 +45,7 @@ label {
 
 /* Header */
 #head {
-    background: #181015 url( ../images/ngajii.jpg) no-repeat;
+    background: #181015 url( ../images/santrinew1.png) no-repeat;
     background-size: cover;
     min-height: 620px;
     text-align: center;
@@ -163,7 +173,7 @@ div.hbox {
 
 
 .jumbotron {
-    background-color: #747a80;
+    background-color: #333333;
 }
 
 .page-header {

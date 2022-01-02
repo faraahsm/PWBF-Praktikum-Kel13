@@ -20,7 +20,7 @@
         @endif
 
     {{-- menampilkan form login --}}
-	<h3 style="margin: 25px; text-align: center;">{{$title}}</h3>
+	<h3 style="margin: 25px; text-align: center;" class="text-putih">{{$title}}</h3>
 	  <form action="/login/authenticate" method="POST" class="form login">
 		@csrf
 		<div class="form__field">
@@ -29,7 +29,7 @@
 		  <label for="login__username"><svg class="icon">
 			  <use xlink:href="#icon-user"></use>
 			</svg><span class="hidden">Email</span></label>
-		  <input style="color: black;" id="login__email" type="email" name="email" class="form__input @error('email') is-invalid @enderror" placeholder="Email" required>
+		  <input id="login__email" type="email" name="email" class="form__input @error('email') is-invalid @enderror" placeholder="Email" required>
 		  @error('email')
 			  <div class="invalid-feedback">
 				  {{ $message }}
@@ -51,10 +51,11 @@
 			<span style="color: red; font-weight: bold;">{{ session('loginError') }}</span>
 		@endif
 	  </form>
+	  <h2></h2>
 
-	  <p class="text--center">Belum jadi member? <a href="{{ url('/pendaftaran')}}">Daftar Sekarang</a> <svg class="icon">
+	  {{-- <p class="text--center">Belum jadi member? <a href="{{ url('/pendaftaran')}}">Daftar Sekarang</a> <svg class="icon">
 		  <use xlink:href="#icon-arrow-right"></use>
-		</svg></p>
+		</svg></p> --}}
 
 	</div>
 
