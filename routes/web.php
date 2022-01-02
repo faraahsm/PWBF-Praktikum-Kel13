@@ -74,6 +74,13 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/ubah-pengurus/{id}',[PengurusController::class,"formUpdate"]);
     Route::post('/update-pengurus/{id}',[PengurusController::class,"update"]);
 
+    //guru
+    Route::get('/guru',[GuruController::class, "index"]);
+    Route::get('/hapus-guru/{id}',[PengurusController::class, "hapus"]);
+    Route::get('/form-gurus',[PengurusController::class, "form"]);
+    Route::post('/tambah-guru',[PengurusController::class,"insert"]);
+    Route::get('/ubah-guru/{id}',[PengurusController::class,"formUpdate"]);
+    Route::post('/update-guru/{id}',[PengurusController::class,"update"]);
 });
 
 // User Dashboard
@@ -89,47 +96,42 @@ Route::middleware('auth:user')->group(function () {
                             ])
                 ->where('FK_Id_santri', Auth::user()->id_santri)
                 ->get();
-        return view('santri-dashboard', ["title" => "Dashboard-Santri", "data" => $data]);
+        return view('santri-dashboard', ["title" => "Dashboard Santri", "data" => $data]);
     });
     Route::get('detail-pengurus', function(){
         $allPengurus = App\Models\Pengurus::all();
-        return view('detail-pengurus', ["title" => "Detail-Pengurus",'data' => $allPengurus]);
+        return view('detail-pengurus', ["title" => "Detail Pengurus",'data' => $allPengurus]);
     });
 });
 
 
-// Admin Dashboard
+// Guru Dashboard
 Route::middleware('auth:guru')->group(function () {
     Route::get('/dashboard',[DashboardController::class,"index"])->name('dashboard');
 
-  // santri
-  Route::get('/santri',[SantriController::class,"index"]);
-  Route::get('/form-santri',[SantriController::class,"form"]);
-  Route::post('/tambah-santri',[SantriController::class,"insert"]);
-  Route::get('/hapus-santri/{id}',[SantriController::class, 'delete']);
-  Route::get('/ubah-santri/{id}',[SantriController::class, 'formUpdate']);
-  Route::post('/ubah-santri/{id}',[SantriController::class, 'update']);
+    // santri
+    Route::get('/santri',[SantriController::class,"index"]);
 
-// buku
-Route::get('/buku', [BukuController::class, 'index']);
-Route::get('/form-buku',[BukuController::class, "form"]);
-Route::post('/tambah-buku',[BukuController::class,"tambahBuku"]);
-Route::get('/hapus-buku/{id}',[BukuController::class, 'hapusBuku']);
-Route::get('/ubah-buku/{id}',[BukuController::class, 'show']);
-Route::post('/ubah-buku/{id}',[BukuController::class, 'update']);
+    // buku
+    Route::get('/buku', [BukuController::class, 'index']);
+    Route::get('/form-buku',[BukuController::class, "form"]);
+    Route::post('/tambah-buku',[BukuController::class,"tambahBuku"]);
+    Route::get('/hapus-buku/{id}',[BukuController::class, 'hapusBuku']);
+    Route::get('/ubah-buku/{id}',[BukuController::class, 'show']);
+    Route::post('/ubah-buku/{id}',[BukuController::class, 'update']);
 
-// bab
-Route::get('/show-bab/{id}',[BukuController::class, "showBab"])->name('bab');
-Route::get('/form-bab',[BukuController::class, "bab"]);
-Route::post('/tambah-bab',[BukuController::class,"tambahBab"]);
-Route::get('/hapus-bab/{id}',[BukuController::class, 'hapusBab']);
+    // bab
+    Route::get('/show-bab/{id}',[BukuController::class, "showBab"])->name('bab');
+    Route::get('/form-bab',[BukuController::class, "bab"]);
+    Route::post('/tambah-bab',[BukuController::class,"tambahBab"]);
+    Route::get('/hapus-bab/{id}',[BukuController::class, 'hapusBab']);
 
-// kemajuan
-Route::get('/form-kemajuan',[KemajuanController::class, "form"]);
-Route::post('/tambah-kemajuan',[KemajuanController::class, "tambah"]);
-Route::get('/kemajuan', [KemajuanController::class, "index"]);
-Route::get('/hapus-kemajuan/{id}',[KemajuanController::class, 'hapus']);
+    // kemajuan
+    Route::get('/form-kemajuan',[KemajuanController::class, "form"]);
+    Route::post('/tambah-kemajuan',[KemajuanController::class, "tambah"]);
+    Route::get('/kemajuan', [KemajuanController::class, "index"]);
+    Route::get('/hapus-kemajuan/{id}',[KemajuanController::class, 'hapus']);
 
-//guru 
-Route::get('/guru',[GuruController::class, "index"]);
+    //guru 
+    Route::get('/guru',[GuruController::class, "index"]);
 });

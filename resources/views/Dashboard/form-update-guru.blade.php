@@ -56,44 +56,37 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+        <h1 class="h2">Ubah Guru</h1>
       </div>
-      {{-- menampilkan error validasi --}}
-        @if (count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-      <form method="POST" action="/tambah-bab">
+      <form method="POST" action="/update-guru/{{$data->id_guru}}">
           @csrf
               <div class="row">
                   <div class="col-lg-6">
                       <div class="form-group">
-                        <label for="buku">Buku</label>
-                          <select class="form-control" id="buku" name="FK_Id_buku">
-                            @foreach ( $data as $row )
-                                <option value="{{$row->id}}">{{ $row->buku }}</option>
-                            @endforeach
+                          <label for="name">Nama</label>
+                          <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_guru']}}>
+                      </div>
+                      <div class="form-group">
+                          <label for="tgl_lahir">No Hp</label>
+                          <input type="text" class="form-control" id="hp" name="hp" value={{$data->hp}}>
+                      </div>
+                      <div class="form-group">
+                      <label for="gender">Gender</label>
+                          <select class="form-control" id="gender" name="gender" value={{$data->gender}}>
+                          <option>L</option>
+                          <option>P</option>
                           </select>
                       </div>
                       <div class="form-group">
-                          <label for="bab">Bab</label>
-                          <input type="text" class="form-control" id="bab" name="bab" required>
+                          <label>Email</label>
+                          <input type="email" class="form-control" id="email" name="email" value={{$data->email}}>
                       </div>
                       <div class="form-group">
-                          <label for="judul">Judul</label>
-                          <input type="text" class="form-control" id="judul" name="judul" required>
+                          <label>Status Aktif</label>
+                          <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif" value={{$data->aktif}} >
                       </div>
-                      <div class="form-group">
-                          <label for="keterangan">Keterangan</label>
-                          <input type="text" class="form-control" id="keterangan" name="keterangan" required>
-                      </div>
-                    </div>
-                    <div class="row">
+                  </div>
+                  <div class="row">
                     <div class="col-lg-6">
                     <button type="submit" class="btn mt-2 btn-primary ml-3 btn-sm">Submit</button>
                     </div>

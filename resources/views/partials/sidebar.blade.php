@@ -9,36 +9,37 @@
           </li>
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="/santri">
-              <span data-feather="file"></span>
+              <span data-feather="users"></span>
               Santri
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Pengurus") ? 'active' : '' }}" href="/pengurus">
-              <span data-feather="shopping-cart"></span>
+              <span data-feather="users"></span>
               Pengurus
             </a>
           </li>
+          @auth
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === "Guru") ? 'active' : '' }}" href="/guru">
+              <span data-feather="users"></span>
+              Guru
+            </a>
+          </li>
+          @else
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Buku") ? 'active' : '' }}" href="/buku">
-              <span data-feather="users"></span>
+              <span data-feather="file"></span>
               Buku
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Kemajuan") ? 'active' : '' }}" href="/kemajuan">
-              <span data-feather="users"></span>
+              <span data-feather="file"></span>
               Kemajuan
             </a>
           </li>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {{ ($title === "guru") ? 'active' : '' }}" href="/guru">
-          <span data-feather="file"></span>
-          Guru
-        </a>
-      </li>
+          @endauth
         </ul>
       </div>
     </nav>

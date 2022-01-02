@@ -60,7 +60,7 @@
         <h1 class="h2">Dashboard</h1>
       </div> --}}
     <div class="container-fluid px-4">
-    <h3 class="mt-4">Data Pengurus</h3>
+    <h3 class="mt-4">Data Guru</h3>
 
     @if (session()->get( 'err'))
      <div class="alert alert-danger" role="alert">
@@ -88,6 +88,12 @@
                         <td>{{ $guru->gender}}</td>
                         <td>{{ $guru->hp }}</td>
                         <td>{{ $guru->email }}</td>
+                        <td>
+                          <a href="/hapus-guru/<?=$pengurus->id_guru ?>" class="btn btn-sm btn-danger">Hapus</a>
+                          </td>
+                          <td>
+                          <a href="/ubah-guru/<?=$pengurus->id_guru ?>" class="btn btn-sm btn-warning">Ubah</a>
+                          </td>
                     </tr>
                     @endforeach
                 </tbody>
