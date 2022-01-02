@@ -13,20 +13,20 @@
               Santri
             </a>
           </li>
+          @can('admin')
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Pengurus") ? 'active' : '' }}" href="/pengurus">
               <span data-feather="users"></span>
               Pengurus
             </a>
           </li>
-          @auth
+          @endcan
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Guru") ? 'active' : '' }}" href="/guru">
               <span data-feather="users"></span>
               Guru
             </a>
           </li>
-          @else
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Buku") ? 'active' : '' }}" href="/buku">
               <span data-feather="file"></span>
@@ -39,7 +39,6 @@
               Kemajuan
             </a>
           </li>
-          @endauth
         </ul>
       </div>
     </nav>

@@ -58,11 +58,14 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="container-fluid px-4">
     <h3 class="mt-4">Data Santri</h3>
+  
     <a href="/form-santri" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
+  
     <div class="card mb-4">
         <div class="card-body table-responsive">
             <table id="table_id" class="table">
                 <thead>
+                  
                     <tr>
                         <th>Nama</th>
                         <th>Jenis Kelamin</th>
@@ -76,6 +79,7 @@
                         <th>Status</th>
                         <th>Hapus</th>
                         <th>Ubah</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
@@ -91,6 +95,7 @@
                         <td>{{ $santri->email }}</td>
                         <td>{{ $santri->tanggal_masuk }}</td>
                         <td>{{ $santri->aktif }}</td>
+                    
                         <td>
                         <a href="/hapus-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-danger">Hapus</a>
                         </td>

@@ -61,12 +61,15 @@
       </div> --}}
     <div class="container-fluid px-4">
     <h3 class="mt-4">Data Guru</h3>
+    
+    <a href="/form-santri" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
+    
 
-    @if (session()->get( 'err'))
+    {{-- @if (session()->get( 'err'))
      <div class="alert alert-danger" role="alert">
         Pengurus ini berelasi dengan data kemajuan !!!
       </div>
-      @endif
+      @endif --}}
 
     
     <div class="card mb-4">
@@ -78,6 +81,9 @@
                         <th>Jenis Kelamin</th>
                         <th>No HP</th>
                         <th>Email</th>
+                        <th>hapus</th>
+                        <th>Ubah</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
@@ -88,12 +94,17 @@
                         <td>{{ $guru->gender}}</td>
                         <td>{{ $guru->hp }}</td>
                         <td>{{ $guru->email }}</td>
+                       
+
                         <td>
-                          <a href="/hapus-guru/<?=$pengurus->id_guru ?>" class="btn btn-sm btn-danger">Hapus</a>
+                          <a href="/hapus-guru/<?=$guru->id_guru ?>" class="btn btn-sm btn-danger">Hapus</a>
                           </td>
                           <td>
-                          <a href="/ubah-guru/<?=$pengurus->id_guru ?>" class="btn btn-sm btn-warning">Ubah</a>
+                          <a href="/ubah-guru/<?=$guru->id_guru ?>" class="btn btn-sm btn-warning">Ubah</a>
                           </td>
+
+                        
+
                     </tr>
                     @endforeach
                 </tbody>
