@@ -17,7 +17,7 @@ class CreateBuku extends Migration
             $table->id();
             $table->string('buku',50);
             $table->longText('keterangan');
-            $table->text('gambar');
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

@@ -50,6 +50,7 @@ class BukuController extends Controller
     }
 
     public function tambahBuku(Request $request){
+
         $validation = $request->validate([
             "buku" => ["required", "min:3", "max:49"],
             "keterangan" => ["required"],

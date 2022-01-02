@@ -87,7 +87,7 @@
                     <tr>
                         <td>{{ $row->buku}}</td>
                         <td>{{ $row->keterangan}}</td>
-                        <td>{{ $row->gambar}}</td>
+                        <td img src="{{ asset('storage/'. $row->gambar) }}" >{{ $row->gambar}}</td>
                         <td>{{ $row->created_at }}</td>
                         <td>{{ $row->updated_at }}</td>
                         <td>

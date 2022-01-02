@@ -58,7 +58,7 @@
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Tambah Buku</h1>
       </div>
-      <form method="POST" action="/tambah-buku">
+      <form method="POST" action="/tambah-buku" enctype="multipart/form-data">
           @csrf
               <div class="row">
                   <div class="col-lg-6">
@@ -71,14 +71,11 @@
                           <label for="ket">Keterangan</label>
                           <input type="text" class="form-control" id="ket" name="keterangan">
                       </div>
-                      <form action="upload.php" method="POST" enctype="multipart/form-data">
-                        <h5> </h5>
-                        <div class="form-group">
-                        <label for="ket">Upload Gambar</label>
+                        
+                      <div class="form-group">
+                        <label for="gambar">Upload Gambar</label>
                         <input type="file" class="form-control" id="gam" name="gambar">
-                        </div>
-                      </form>
-
+                      </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6">
