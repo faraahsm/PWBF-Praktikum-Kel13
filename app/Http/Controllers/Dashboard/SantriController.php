@@ -15,11 +15,15 @@ class SantriController extends Controller
 {
     public function index(){
         $allSantri=Santri::all();
-        return view('Dashboard/santri',["data_santri" => $allSantri,"title" => "santri"]);
+        return view('Dashboard/santri',[
+            "data_santri" => $allSantri,
+            "title" => "Santri"]);
     }
 
     public function form(){
-        return view('Dashboard/form-santri');
+        return view('Dashboard/form-santri',[
+            "title" => "Tambah Santri"
+        ]);
     }
 
     public function delete($idSantri){
@@ -36,7 +40,10 @@ class SantriController extends Controller
         if($santri == null){
             return redirect("/santri");
         }
-        return view("Dashboard/form-update-santri", ["data" => $santri]);
+        return view("Dashboard/form-update-santri",[
+            "data" => $santri,
+            "title" => "Ubah Santri"
+        ]);
     }
 
     public function update(Request $request,$idSantri){

@@ -52,11 +52,6 @@
 		@endif
 	  </form>
 	  <h2></h2>
-
-	  {{-- <p class="text--center">Belum jadi member? <a href="{{ url('/pendaftaran')}}">Daftar Sekarang</a> <svg class="icon">
-		  <use xlink:href="#icon-arrow-right"></use>
-		</svg></p> --}}
-
 	</div>
 
 	<svg xmlns="http://www.w3.org/2000/svg" class="icons">

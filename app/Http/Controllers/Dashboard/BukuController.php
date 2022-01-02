@@ -12,25 +12,35 @@ class BukuController extends Controller
 {
     public function index(){
         $buku = Buku::all();
-        return view('Dashboard.buku', ['data' => $buku]);
+        return view('Dashboard.buku',[
+            'data' => $buku,
+            "title" => "Buku"
+        ]);
     }
 
     public function show($id){
         try {
             $buku = Buku::findOrFail($id);
-            return view('Dashboard.form-update-buku', ['data' => $buku]);
+            return view('Dashboard.form-update-buku',[
+                'data' => $buku,
+                "title" => "Ubah Buku"
+            ]);
         } catch (Exception $err) {
             dd($err);
         }
     }
 
     public function form(){
-        return view('Dashboard.form-buku');
+        return view('Dashboard.form-buku',[
+            "title" => "Tambah Buku"
+        ]);
     }
 
     public function bab(){
         $buku = Buku::all();
-        return view('Dashboard.form-bab', ['data' => $buku]);
+        return view('Dashboard.form-bab',[
+            'data' => $buku
+        ]);
     }
 
     public function showBab($id){

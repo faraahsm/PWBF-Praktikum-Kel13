@@ -18,7 +18,10 @@ class PengurusController extends Controller
             dd($err);
         }
 
-        return view('Dashboard/pengurus',['data' => $allPengurus]);
+        return view('Dashboard/pengurus',[
+            'data' => $allPengurus,
+            "title" => "Pengurus"
+        ]);
     }
 
     public function hapus($id){
@@ -32,7 +35,9 @@ class PengurusController extends Controller
     }
 
     public function form(){
-        return view('Dashboard/form-pengurus');
+        return view('Dashboard/form-pengurus',[
+            "title" => "Tambah Pengurus"
+        ]);
     }
 
     public function insert(Request $request){
@@ -61,7 +66,10 @@ class PengurusController extends Controller
         } catch (Exception $err) {
             dd($err);
         }
-        return view('Dashboard/form-update-pengurus',['data'=>$pengurus]);
+        return view('Dashboard/form-update-pengurus',[
+            'data'=>$pengurus,
+            "title" => "Ubah Pengurus"
+        ]);
     }
 
     public function update(Request $request, $id){

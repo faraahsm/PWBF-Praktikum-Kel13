@@ -22,13 +22,18 @@ class KemajuanController extends Controller
                             ])
                 ->where('FK_Id_pengurus', Auth::user()->id_pengurus)
                 ->get();
-        return view('Dashboard.kemajuan', ['data' => $data]);
+        return view('Dashboard.kemajuan',[
+            'data' => $data,
+            "title" => "Kemajuan"
+        ]);
     }
 
     public function form(){
         $santri = Santri::all();
         $bab = Bab::all();
-        return view('Dashboard.form-kemajuan', compact('santri', 'bab'));
+        return view('Dashboard.form-kemajuan',[
+            "title" => "Tambah Kemajuan"
+        ], compact('santri', 'bab'));
     }
 
     public function tambah(Request $request){
