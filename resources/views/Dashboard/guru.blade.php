@@ -24,7 +24,7 @@
         -moz-user-select: none;
         user-select: none;
       }
-
+      
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -60,18 +60,15 @@
         <h1 class="h2">Dashboard</h1>
       </div> --}}
     <div class="container-fluid px-4">
-    <h3 class="mt-4">Data Guru</h3>
-    
-    <a href="/form-santri" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
-    
+    <h3 class="mt-4">Data Pengurus</h3>
 
-    {{-- @if (session()->get( 'err'))
+    @if (session()->get( 'err'))
      <div class="alert alert-danger" role="alert">
         Pengurus ini berelasi dengan data kemajuan !!!
       </div>
-      @endif --}}
+      @endif
 
-    
+
     <div class="card mb-4">
         <div class="card-body table-responsive">
             <table id="table_id" class="table">
@@ -81,9 +78,6 @@
                         <th>Jenis Kelamin</th>
                         <th>No HP</th>
                         <th>Email</th>
-                        <th>hapus</th>
-                        <th>Ubah</th>
-                       
                     </tr>
                 </thead>
                 <tbody>
@@ -94,17 +88,6 @@
                         <td>{{ $guru->gender}}</td>
                         <td>{{ $guru->hp }}</td>
                         <td>{{ $guru->email }}</td>
-                       
-
-                        <td>
-                          <a href="/hapus-guru/<?=$guru->id_guru ?>" class="btn btn-sm btn-danger">Hapus</a>
-                          </td>
-                          <td>
-                          <a href="/ubah-guru/<?=$guru->id_guru ?>" class="btn btn-sm btn-warning">Ubah</a>
-                          </td>
-
-                        
-
                     </tr>
                     @endforeach
                 </tbody>
