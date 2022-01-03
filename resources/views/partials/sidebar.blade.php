@@ -7,7 +7,7 @@
               Dashboard
             </a>
           </li>
-          {{-- @can('admin') --}}
+          @can('admin')
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="/santri">
               <span data-feather="users"></span>
@@ -26,7 +26,7 @@
               Guru
             </a>
           </li>
-          {{-- @endcan --}}
+          @endcan
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="/view-santri">
               <span data-feather="users"></span>

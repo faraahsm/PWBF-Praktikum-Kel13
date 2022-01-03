@@ -85,7 +85,7 @@ Route::middleware('auth:user')->group(function () {
         return view('user-buku', ["title" => "Data Buku", "data" => $data]);
     });
 
-    //bab
+    //melihat detail bab
 
     // Route::get('/user-show-bab/{id}', function(){
     //     $data = App\Models\Bab::with(['Buku'])
@@ -96,7 +96,7 @@ Route::middleware('auth:user')->group(function () {
     Route::get('/user-show-bab/{id}',[BukuController::class, "showUserBab"])->name('userbab');
 
     //melihat data pengurus
-    Route::get('user-pengurus', function(){
+    Route::get('detail-pengurus', function(){
         $allPengurus = App\Models\Pengurus::all();
         return view('detail-pengurus', ["title" => "Data Pengurus",'data' => $allPengurus]);
     });

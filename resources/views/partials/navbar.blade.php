@@ -16,9 +16,6 @@
               <li class="nav-item">
                   <a class="nav-link text-putih {{ ($title === "Beranda") ? 'active' : '' }}" href="{{ url('/')}}">Beranda</a>
               </li>
-              {{-- <li class="nav-item">
-                  <a class="nav-link text-putih {{ ($title === "Tentang") ? 'active' : '' }}" href="{{ url('/tentang')}}">Tentang</a>
-              </li> --}}
               @auth
               <li class="nav-item">
                 <a class="nav-link text-putih {{ ($title === "Tentang") ? 'active' : '' }}" href="{{ url('/about')}}">Tentang</a>
@@ -28,7 +25,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link text-putih {{ ($title === "Data Buku") ? 'active' : '' }}" href="{{ url('/user-buku')}}">Data Buku</a></li>
                     <li><a class="nav-link text-putih {{ ($title === "Data Kemajuan") ? 'active' : '' }}" href="{{ url('/user-dashboard')}}">Data Kemajuan</a></li>
-                    <li><a class="nav-link text-putih {{ ($title === "Data Pengurus") ? 'active' : '' }}" href="{{ url('/user-pengurus')}}">Data Pengurus</a></li>
+                    <li><a class="nav-link text-putih {{ ($title === "Data Pengurus") ? 'active' : '' }}" href="{{ url('/detail-pengurus')}}">Data Pengurus</a></li>
                     <li>
                         <a class="nav-link text-putih {{ ($title === "Logout") ? 'active' : '' }}" href="{{url('/logout')}}">Logout</a>
                     </li>
