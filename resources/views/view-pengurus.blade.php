@@ -56,52 +56,38 @@
   @include('partials.sidebar')
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      {{-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+      </div> --}}
     <div class="container-fluid px-4">
-    <h3 class="mt-4">Data Santri</h3>
-  
-    <a href="/form-santri" class="btn btn-primary btn-sm mb-2">Tambah Data Santri</a>
-  
+    <h3 class="mt-4">Data Pengurus</h3>
+
+    {{-- @if (session()->get( 'err'))
+     <div class="alert alert-danger" role="alert">
+        Pengurus ini berelasi dengan data kemajuan !!!
+      </div>
+      @endif --}}
+
+
     <div class="card mb-4">
         <div class="card-body table-responsive">
             <table id="table_id" class="table">
                 <thead>
-                  
                     <tr>
                         <th>Nama</th>
                         <th>Jenis Kelamin</th>
-                        <th>Tgl Lahir</th>
-                        <th>Kota</th>
-                        <th>Nama Ortu</th>
-                        <th>Alamat Ortu</th>
-                        <th>Nomor Telepon</th>
+                        <th>No HP</th>
                         <th>Email</th>
-                        <th>Tanggal Masuk</th>
-                        <th>Status</th>
-                        <th>Hapus</th>
-                        <th>Ubah</th>
-                       
+                        
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data_santri as $santri)
+                    @foreach ($data as $pengurus)
                     <tr>
-                        <td>{{ $santri->nama_santri}}</td>
-                        <td>{{ $santri->gender}}</td>
-                        <td>{{ $santri->tanggal_lhr }}</td>
-                        <td>{{ $santri->kota_lhr }}</td>
-                        <td>{{ $santri->nama_ortu }}</td>
-                        <td>{{ $santri->alamat_ortu}}</td>
-                        <td>{{ $santri->hp}}</td>
-                        <td>{{ $santri->email }}</td>
-                        <td>{{ $santri->tanggal_masuk }}</td>
-                        <td>{{ $santri->aktif }}</td>
-                    
-                        <td>
-                        <a href="/hapus-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-danger">Hapus</a>
-                        </td>
-                        <td>
-                        <a href="/ubah-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-warning">Ubah</a>
-                        </td>
+                        <td>{{ $pengurus->nama_pengurus}}</td>
+                        <td>{{ $pengurus->gender}}</td>
+                        <td>{{ $pengurus->hp }}</td>
+                        <td>{{ $pengurus->email }}</td>
                     </tr>
                     @endforeach
                 </tbody>

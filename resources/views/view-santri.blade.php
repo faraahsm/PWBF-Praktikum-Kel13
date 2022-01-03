@@ -59,7 +59,7 @@
     <div class="container-fluid px-4">
     <h3 class="mt-4">Data Santri</h3>
   
-    <a href="/form-santri" class="btn btn-primary btn-sm mb-2">Tambah Data Santri</a>
+
   
     <div class="card mb-4">
         <div class="card-body table-responsive">
@@ -77,13 +77,12 @@
                         <th>Email</th>
                         <th>Tanggal Masuk</th>
                         <th>Status</th>
-                        <th>Hapus</th>
-                        <th>Ubah</th>
+                       
                        
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data_santri as $santri)
+                    @foreach ($data as $santri)
                     <tr>
                         <td>{{ $santri->nama_santri}}</td>
                         <td>{{ $santri->gender}}</td>
@@ -96,12 +95,7 @@
                         <td>{{ $santri->tanggal_masuk }}</td>
                         <td>{{ $santri->aktif }}</td>
                     
-                        <td>
-                        <a href="/hapus-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-danger">Hapus</a>
-                        </td>
-                        <td>
-                        <a href="/ubah-santri/<?=$santri->id_santri ?>" class="btn btn-sm btn-warning">Ubah</a>
-                        </td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

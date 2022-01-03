@@ -71,7 +71,7 @@
                           <label for="ket">Keterangan</label>
                           <input type="text" class="form-control" id="ket" name="keterangan">
                       </div>
-                        
+                      <h5></h5>
                       <div class="form-group">
                         <label for="gambar">Upload Gambar</label>
                         <input type="file" class="form-control" id="gam" name="gambar">

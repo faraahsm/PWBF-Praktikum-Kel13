@@ -60,7 +60,7 @@
         <h1 class="h2">Dashboard</h1>
       </div> --}}
     <div class="container-fluid px-4">
-    <h3 class="mt-4">Data Pengurus</h3>
+    <h3 class="mt-4">Data Guru</h3>
 
     @if (session()->get( 'err'))
      <div class="alert alert-danger" role="alert">
@@ -68,7 +68,7 @@
       </div>
       @endif
 
-
+    <a href="/form-guru" class="btn btn-primary btn-sm mb-2">Tambah Data Guru</a>
     <div class="card mb-4">
         <div class="card-body table-responsive">
             <table id="table_id" class="table">
@@ -78,6 +78,8 @@
                         <th>Jenis Kelamin</th>
                         <th>No HP</th>
                         <th>Email</th>
+                        <th>Hapus</th>
+                        <th>Ubah</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -88,6 +90,12 @@
                         <td>{{ $guru->gender}}</td>
                         <td>{{ $guru->hp }}</td>
                         <td>{{ $guru->email }}</td>
+                        <td>
+                        <a href="/hapus-guru/<?=$guru->id_guru ?>" class="btn btn-sm btn-danger">Hapus</a>
+                        </td>
+                        <td>
+                        <a href="/ubah-guru/<?=$guru->id_guru ?>" class="btn btn-sm btn-warning">Ubah</a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

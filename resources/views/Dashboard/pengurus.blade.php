@@ -68,7 +68,7 @@
       </div>
       @endif
 
-    <a href="/form-pengurus" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
+    <a href="/form-pengurus" class="btn btn-primary btn-sm mb-2">Tambah Data Pengurus</a>
     <div class="card mb-4">
         <div class="card-body table-responsive">
             <table id="table_id" class="table">

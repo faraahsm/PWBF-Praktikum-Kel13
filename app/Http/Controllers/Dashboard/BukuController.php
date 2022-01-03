@@ -41,7 +41,8 @@ class BukuController extends Controller
     public function bab(){
         $buku = Buku::all();
         return view('Dashboard.form-bab',[
-            'data' => $buku
+            'data' => $buku,
+            "title" => "Tambah Bab"
         ]);
     }
 
@@ -49,6 +50,17 @@ class BukuController extends Controller
         $data = Buku::all();
         $bab = Bab::where('FK_Id_buku', $id)->with('Buku')->get();
         return view('Dashboard.buku', [
+            "title"=> "Detail Buku",
+
+        ] ,compact('data', 'bab'));
+
+      
+    }
+
+    public function showUserBab($id){
+        $data = Buku::all();
+        $bab = Bab::where('FK_Id_buku', $id)->with('Buku')->get();
+        return view('user-buku', [
             "title"=> "Detail Buku",
 
         ] ,compact('data', 'bab'));

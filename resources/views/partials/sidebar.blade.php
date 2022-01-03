@@ -7,6 +7,7 @@
               Dashboard
             </a>
           </li>
+          {{-- @can('admin') --}}
           <li class="nav-item">
             <a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="/santri">
               <span data-feather="users"></span>
@@ -17,6 +18,31 @@
             <a class="nav-link {{ ($title === "Pengurus") ? 'active' : '' }}" href="/pengurus">
               <span data-feather="users"></span>
               Pengurus
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === "Guru") ? 'active' : '' }}" href="/guru">
+              <span data-feather="users"></span>
+              Guru
+            </a>
+          </li>
+          {{-- @endcan --}}
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === "Santri") ? 'active' : '' }}" href="/view-santri">
+              <span data-feather="users"></span>
+              Santri
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === "Pengurus") ? 'active' : '' }}" href="/view-pengurus">
+              <span data-feather="users"></span>
+              Pengurus
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === "Guru") ? 'active' : '' }}" href="/view-guru">
+              <span data-feather="users"></span>
+              Guru
             </a>
           </li>
           <li class="nav-item">
@@ -31,14 +57,6 @@
               Kemajuan
             </a>
           </li>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link {{ ($title === "guru") ? 'active' : '' }}" href="/guru">
-          <span data-feather="file"></span>
-          Guru
-        </a>
-      </li>
         </ul>
       </div>
     </nav>

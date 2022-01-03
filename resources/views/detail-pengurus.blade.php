@@ -2,10 +2,13 @@
 
 @section('container')
     <div class="container-fluid px-4 mb-5">
-    <h3 class="mt-4">Data Detail Pengurus</h3>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2 text-putih">Data Pengurus</h1>
+          </div>
+    <h3></h3>
     <div class="card mb-4">
         <div class="card-body table-responsive">
-            <table id="table_id" class="table">
+            <table id="table_id" class="table text-putih">
                 <thead>
                     <tr>
                         <th>Nama Pengurus</th>

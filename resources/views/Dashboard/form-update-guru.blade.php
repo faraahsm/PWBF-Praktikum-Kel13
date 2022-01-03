@@ -56,28 +56,35 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Ubah Buku</h1>
+        <h1 class="h2">Ubah Guru</h1>
       </div>
-      <form method="POST" action="/ubah-buku/{{$data->id}}">
+      <form method="POST" action="/update-guru/{{$data->id_guru}}">
           @csrf
               <div class="row">
                   <div class="col-lg-6">
                       <div class="form-group">
-                          <label for="name">Nama Buku</label>
-                          <input type="text" class="form-control" id="name" name="buku" value="{{$data->buku}}">
+                          <label for="name">Nama</label>
+                          <input type="text" class="form-control" id="name" name="nama_guru" value={{$data['nama_guru']}}>
                       </div>
-                      <h5></h5>
                       <div class="form-group">
-                          <label for="ket">Keterangan</label>
-                          <input type="text" class="form-control" id="ket" name="keterangan" value="{{$data->keterangan}}">
+                          <label for="tgl_lahir">No Hp</label>
+                          <input type="text" class="form-control" id="hp" name="hp" value={{$data->hp}}>
                       </div>
-                      <form action="upload.php" method="POST" enctype="multipart/form-data">
-                        <h5></h5>
-                        <div class="form-group">
-                        <label for="ket">Upload Gambar</label>
-                        <input type="file" class="form-control" id="gam" name="gambar" value="{{$data->gambar}}">
-                        </div>
-                      </form>
+                      <div class="form-group">
+                      <label for="gender">Gender</label>
+                          <select class="form-control" id="gender" name="gender" value={{$data->gender}}>
+                          <option>L</option>
+                          <option>P</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label>Email</label>
+                          <input type="email" class="form-control" id="email" name="email" value={{$data->email}}>
+                      </div>
+                      <div class="form-group">
+                          <label>Status Aktif</label>
+                          <input type="text" class="form-control" id="aktif" aria-describedby="emailHelp" name="aktif" value={{$data->aktif}} >
+                      </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6">

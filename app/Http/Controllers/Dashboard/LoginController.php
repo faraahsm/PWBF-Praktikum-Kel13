@@ -31,7 +31,7 @@ class LoginController extends Controller
         }
         else if(Auth::guard('guru')->attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended(route('dashboard'));
+            return redirect()->intended(route('DashGuru'));
         }
         return back()->with(['loginError' => 'Email atau Password salah']);
     }

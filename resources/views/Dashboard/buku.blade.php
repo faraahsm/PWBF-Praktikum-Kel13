@@ -63,7 +63,7 @@
         Buku ini berelasi dengan data kemajuan !!!
       </div>
       @endif
-    <a href="/form-buku" class="btn btn-primary btn-sm mb-2">Tambah Data</a>
+    <a href="/form-buku" class="btn btn-primary btn-sm mb-2">Tambah Data Buku</a>
     @if ($data->isNotEmpty())
         <a href="/form-bab" class="btn btn-primary btn-sm mb-2">Tambah Data Bab</a>
     @endif
