@@ -84,12 +84,16 @@ Route::middleware('auth:user')->group(function () {
                 ->get();
         return view('user-buku', ["title" => "Data Buku", "data" => $data]);
     });
+
+    //bab
+
     // Route::get('/user-show-bab/{id}', function(){
     //     $data = App\Models\Bab::with(['Buku'])
     //             ->get();
     //     return view('user-show-bab', ["title" => "Data Bab", "data" => $data]);
     // });
-    Route::get('/user-show-bab/{id}',[BukuController::class, "showUserBab"])->name('bab');
+    
+    Route::get('/user-show-bab/{id}',[BukuController::class, "showUserBab"])->name('userbab');
 
     //melihat data pengurus
     Route::get('user-pengurus', function(){
