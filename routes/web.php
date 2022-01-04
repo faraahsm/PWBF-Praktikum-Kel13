@@ -105,7 +105,7 @@ Route::middleware('auth:user')->group(function () {
 
 // Guru Dashboard
 Route::middleware('auth:guru')->group(function () {
-    Route::get('/guru-dashboard',[DashboardController::class,"index"])->name('DashGuru');
+    Route::get('/guru-dashboard',[DashboardController::class,"home"])->name('DashGuru');
 
   // santri
   Route::get('view-santri', function(){
