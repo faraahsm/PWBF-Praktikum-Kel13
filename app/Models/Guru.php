@@ -24,5 +24,9 @@ class Guru extends Authenticatable
     ];
 
     // Relationships
-    
+    public function guruKemajuans(){
+        // having many kemajuans
+        return $this->hasMany(Kemajuan::class, 'FK_Id_guru', 'id_guru');
+    }
+
 }

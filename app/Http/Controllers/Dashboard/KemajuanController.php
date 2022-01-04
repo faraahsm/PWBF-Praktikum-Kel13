@@ -17,10 +17,10 @@ class KemajuanController extends Controller
     public function index(){
         $data = Kemajuan::with(['detailKemajuans',
                                 'detailKemajuans.detailKemajuanBabs.Buku',
-                                'kemajuanPenguruses',
+                                'kemajuanGurus',
                                 'kemajuanSantris'
                             ])
-                ->where('FK_Id_pengurus', Auth::user()->id_pengurus)
+                ->where('FK_Id_guru', Auth::user()->id_guru)
                 ->get();
         return view('Dashboard.kemajuan',[
             'data' => $data,
@@ -39,7 +39,7 @@ class KemajuanController extends Controller
     public function tambah(Request $request){
 
         $kemajuan = $request->validate([
-            "FK_Id_pengurus" => ["numeric", "required"],
+            "FK_Id_guru" => ["numeric", "required"],
             "FK_Id_santri" => ["numeric", "required"],
             "tanggal" => ["date", "required"],
             "status" => ["max:1", "required"]

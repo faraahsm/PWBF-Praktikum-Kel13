@@ -73,8 +73,8 @@
               <div class="row">
                   <div class="col-lg-6">
                       <div class="form-group">
-                          <label for="name">Nama Pengurus</label>
-                          <input type="text" class="form-control" id="name" name="FK_Id_pengurus" value="{{__(Auth::user()->id_pengurus)}}" readonly>
+                          <label for="name">Nama guru</label>
+                          <input type="text" class="form-control" id="name" name="FK_Id_guru" value="{{__(Auth::user()->id_guru)}}" readonly>
                       </div>
                       <div class="form-group">
                         <label for="santri">Santri</label>

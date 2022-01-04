@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ ($title === "Kemajuan") ? 'active' : '' }}" href="/kemajuan">
+            <a class="nav-link {{ ($title === "Kemajuan") ? 'active' : '' }}" href="/kemajuan-guru">
               <span data-feather="file"></span>
               Kemajuan
             </a>

@@ -16,7 +16,7 @@ class CreateKemajuan extends Migration
         Schema::create('kemajuan', function (Blueprint $table) {
             $table->id();
             $table->foreignId('FK_Id_santri')->constrained('santri','id_santri')->onDelete('cascade');
-            $table->foreignId('FK_Id_pengurus')->constrained('pengurus','id_pengurus');
+            $table->foreignId('FK_Id_guru')->constrained('guru','id_guru');
             $table->timestamp('tanggal');
             $table->char('status',1);
             $table->timestamps();

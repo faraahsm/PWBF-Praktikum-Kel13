@@ -12,7 +12,7 @@
                 <thead>
                     <tr>
                         <th>Nama Santri</th>
-                        <th>Nama Pengurus</th>
+                        <th>Nama guru</th>
                         <th>Buku</th>
                         <th>Bab</th>
                         <th>Tanggal</th>
@@ -24,7 +24,7 @@
                     @foreach ($data as $kemajuan)
                     <tr>
                         <td>{{ $kemajuan->kemajuanSantris->nama_santri }}</td>
-                        <td>{{ $kemajuan->kemajuanPenguruses->nama_pengurus }}</td>
+                        <td>{{ $kemajuan->kemajuanGurus->nama_guru }}</td>
                         <td>{{ $kemajuan->detailKemajuans[0]->detailKemajuanBabs->Buku->buku }}</td>
                         <td>{{ $kemajuan->detailKemajuans[0]->detailKemajuanBabs->bab }}</td>
                         <td>{{ $kemajuan->tanggal }}</td>

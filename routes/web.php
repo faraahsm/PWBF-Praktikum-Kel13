@@ -58,7 +58,20 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/tambah-guru',[GuruController::class,"insert"]);
     Route::get('/ubah-guru/{id}',[GuruController::class,"formUpdate"]);
     Route::post('/update-guru/{id}',[GuruController::class,"update"]);
-    });
+  });
+  
+    //kemajuan
+    Route::get('/kemajuan-guru', function(){
+      $data = App\Models\Kemajuan::with(['detailKemajuans',
+                              'detailKemajuans.detailKemajuanBabs.Buku',
+                              'kemajuanGurus',
+                              'kemajuanSantris'
+                          ])
+              ->get();
+      return view('Dashboard.kemajuan-guru', ["title" => "Data Kemajuan", "data" => $data]);
+  });
+  
+   
 
 // User Dashboard
 Route::middleware('auth:user')->group(function () {
@@ -70,7 +83,7 @@ Route::middleware('auth:user')->group(function () {
     Route::get('/user-dashboard', function(){
         $data = App\Models\Kemajuan::with(['detailKemajuans',
                                 'detailKemajuans.detailKemajuanBabs.Buku',
-                                'kemajuanPenguruses',
+                                'kemajuanGurus',
                                 'kemajuanSantris'
                             ])
                 ->where('FK_Id_santri', Auth::user()->id_santri)
@@ -85,14 +98,6 @@ Route::middleware('auth:user')->group(function () {
         return view('user-buku', ["title" => "Data Buku", "data" => $data]);
     });
 
-    //melihat detail bab
-
-    // Route::get('/user-show-bab/{id}', function(){
-    //     $data = App\Models\Bab::with(['Buku'])
-    //             ->get();
-    //     return view('user-show-bab', ["title" => "Data Bab", "data" => $data]);
-    // });
-    
     Route::get('/user-show-bab/{id}',[BukuController::class, "showUserBab"])->name('userbab');
 
     //melihat data pengurus
@@ -125,6 +130,13 @@ Route::middleware('auth:guru')->group(function () {
     return view('view-guru', ["title" => "Data Guru",'data' => $allGuru]);
   });
 
+   // kemajuan
+   Route::get('/form-kemajuan',[KemajuanController::class, "form"]);
+   Route::post('/tambah-kemajuan',[KemajuanController::class, "tambah"]);
+   Route::get('/kemajuan', [KemajuanController::class, "index"]);
+   Route::get('/hapus-kemajuan/{id}',[KemajuanController::class, 'hapus']);
+
+
 });
 
 // Admin dan Guru
@@ -142,11 +154,4 @@ Route::middleware('auth:admin,guru')->group(function () {
     Route::get('/form-bab',[BukuController::class, "bab"]);
     Route::post('/tambah-bab',[BukuController::class,"tambahBab"]);
     Route::get('/hapus-bab/{id}',[BukuController::class, 'hapusBab']);
-
-    // kemajuan
-    Route::get('/form-kemajuan',[KemajuanController::class, "form"]);
-    Route::post('/tambah-kemajuan',[KemajuanController::class, "tambah"]);
-    Route::get('/kemajuan', [KemajuanController::class, "index"]);
-    Route::get('/hapus-kemajuan/{id}',[KemajuanController::class, 'hapus']);
-
 });

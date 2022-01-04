@@ -24,8 +24,8 @@ class Pengurus extends Authenticatable
     ];
 
     // Relationships
-    public function pengurusKemajuans(){
-        // having many kemajuans
-        return $this->hasMany(Kemajuan::class, 'FK_Id_pengurus', 'id_pengurus');
-    }
+    // public function pengurusKemajuans(){
+    //     // having many kemajuans
+    //     return $this->hasMany(Kemajuan::class, 'FK_Id_pengurus', 'id_pengurus');
+    // }
 }
