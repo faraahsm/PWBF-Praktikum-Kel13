@@ -87,7 +87,7 @@
                     <tr>
                         <td>{{ $row->buku}}</td>
                         <td>{{ $row->keterangan}}</td>
-                        <td><img src="uploads/{{ $row->gambar }}" style="width:300px;"></td>
+                        <td><img class="img-thumbnail" src="uploads/{{ $row->gambar }}" style="width:300px;"></td>
                         <td>
                         <a href="/show-bab/<?=$row->id ?>" class="btn btn-sm btn-primary">Detail</a>
                         </td>

@@ -22,7 +22,7 @@
                     <tr>
                         <td>{{ $buku->buku }}</td>
                         <td>{{ $buku->keterangan }}</td>
-                        <td><img src="uploads/{{ $buku->gambar }}" style="width:300px;"></td>
+                        <td><img class="img-thumbnail" src="uploads/{{ $buku->gambar }}" style="width:300px;"></td>
                         <td>
                             <a href="/user-show-bab/<?=$buku->id ?>" class="btn btn-sm btn-primary">Detail</a>
                         </td>

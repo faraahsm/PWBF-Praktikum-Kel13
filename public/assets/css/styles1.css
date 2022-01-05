@@ -89,7 +89,7 @@ body {
 /* modules/anchor.css */
 
 :root {
-  --anchorColor: #eee;
+  /* --anchorColor: #eee; */
 }
 
 a {
@@ -147,7 +147,7 @@ input[type="submit"] {
 
 :root {
   --loginBorderRadus: 0.25rem;
-  --loginColor: #eee;
+  /* --loginColor: #eee; */
 
   --loginInputBackgroundColor: #3b4148;
   --loginInputHoverBackgroundColor: #434a52;
