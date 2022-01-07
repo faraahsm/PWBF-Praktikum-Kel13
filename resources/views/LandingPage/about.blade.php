@@ -3,7 +3,7 @@
 @section('container')
 
     {{-- <header id="head" class="secondary"></header> --}}
-
+<div class="testi">
     <!-- container -->
     <div class="container">
         <div class="row">
@@ -29,15 +29,15 @@
                 <div class="panel">
                     <h4 style="color:white">Kegiatan TPQ Banyu Urip</h4>
                     <ul class="list-unstyled list-spaces">
-                        <li><a href="">Bagi-bagi takjil dan buka bersama Ramadhan 1442H</a><br>
+                        <li><a style="color:rgb(199, 191, 182)" href="">Bagi-bagi takjil dan buka bersama Ramadhan 1442H</a><br>
                             <span class="small text-muted">Kegiatan rutin tahunan di bulan Ramadhan yang dilaksanakan oleh para santri.</span></li>
-                        <li><a href="">Pengajian rutin</a><br>
+                        <li><a style="color:rgb(199, 191, 182)" href="">Pengajian rutin</a><br>
                             <span class="small text-muted">Kegiatan rutin bulanan yang diselenggarakan oleh TPQ Banyu Urip.</span></li>
-                        <li><a href="">Unjuk bakat</a><br>
+                        <li><a style="color:rgb(199, 191, 182)" href="">Unjuk bakat</a><br>
                             <span class="small text-muted">Kegiatan rutin tahunan yang diadakan untuk menunjukkan bakat santri dalam lingkup keislaman.</span></li>
-                        <li><a href="">Kuliah subuh</a><br>
+                        <li><a style="color:rgb(199, 191, 182)" href="">Kuliah subuh</a><br>
                             <span class="small text-muted">Kegiatan rutin mingguan yang diadakan untuk menambah pengetahuan tentang Islam yang dibawakan oleh ahlinya.</span></li>
-                        <li><a href="">Sedekah jumat</a><br>
+                        <li><a style="color:rgb(199, 191, 182)" href="">Sedekah jumat</a><br>
                             <span class="small text-muted">Kegiatan rutin mingguan setiap hari jumat yang diadakan untuk membagikan sedekah kepada yang membutuhkan.</span></li>
                     </ul>
                 </div>
@@ -143,4 +143,5 @@
             </div>
         </div>
     </section>
+</div>
 @endsection
